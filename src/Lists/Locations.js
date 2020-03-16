@@ -206,7 +206,7 @@ const Locations = [
             Quest: '#92037143',
             Sharp: '#22279',
         },
-        myChart: "54203023"
+        myChartID: "54203023"
     }												
 ]
 

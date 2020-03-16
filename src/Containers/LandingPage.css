@@ -34,3 +34,15 @@
     display: flex;
     flex-direction: row;
 }
+
+.CheckBoxFlex{
+    display: flex;
+    flex-direction: column;
+}
+
+.CheckBoxFlex div{
+    margin: 12px 20px;
+}
+.CheckBoxFlex input{
+    margin: 0 12px;
+}
