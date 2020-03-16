@@ -25,6 +25,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/carly-babis-pa-c/',
         inNetwork: true,
+        myChart: '270075',
     },
     {
         firstNirstName: 'Puneet',
@@ -51,6 +52,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/puneet-bhalrhu-md/',
         inNetwork: true,
+        myChart: '273037',
     },
     {   
         firstName:'Madalasa',
@@ -77,6 +79,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/madalasa-bista-m-d/', 
         inNetwork: true,
+        myChart: '39702',
     },
     {   
         firstName:'Kelsey',
@@ -103,6 +106,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/kelsey-brangoccio-pa-c/', 
         inNetwork: true,
+        myChart: '267386',
     },
     {   
         firstName:'Edward',
@@ -129,6 +133,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/dr-edward-brantz/',
         inNetwork: true,
+        myChart: '06405',
     },
     {   
         firstName:'Robert',
@@ -155,6 +160,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/robert-brunst-m-d/',
         inNetwork: true,
+        myChart: '08670',
     },
     {   
         firstName:'William',
@@ -181,6 +187,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/william-buchner-m-d/',
         inNetwork: true,
+        myChart: '60830',
     },
     {
         firstName: 'Lauren',
@@ -207,6 +214,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/lauren-campagna-pa/',
         inNetwork: true,
+        myChart: '40112',
     },
     {   
         firstName:'Nicholas',
@@ -233,6 +241,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/nicholas-canelo-m-d/',
         inNetwork: true,
+        myChart: '65521',
     },
     {   
         firstName:'Erinn',
@@ -259,6 +268,7 @@ const PrimaryCareProviders = [
         title: 'FNP-C',
         src: 'https://perlmanclinic.com/ourteam/erinn-case-fnp-c/',
         inNetwork: true,
+        myChart: '270607',
     },
     {   
         firstName:'Stephen',
@@ -285,6 +295,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/stephen-caso-pa/',
         inNetwork: true,
+        myChart: '82085',
     },
     {   
         firstName:'Christopher',
@@ -311,6 +322,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/christopher-ceriale-pa-c/',
         inNetwork: true,
+        myChart: '263353',
     },
     {   
         firstName:'Alonso',
@@ -337,6 +349,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/alonso-chan-pa-c/',
         inNetwork: true,
+        myChart: '84690',
     },
     {   
         firstName:'Alexandra',
@@ -363,6 +376,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/alexandra-chatfield-pa-c/',
         inNetwork: true,
+        myChart: '278907',
     },
     {   
         firstName:'Gourab',
@@ -389,6 +403,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/gourab-das-pa-c/',
         inNetwork: true,
+        myChart: '262694',
     },
     {   
         firstName:'Emily',
@@ -415,6 +430,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/emily-ence-pa/',
         inNetwork: true,
+        myChart: '84615',
     },
     {   
         firstName:'Neenah',
@@ -441,6 +457,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: '',
         inNetwork: true,
+        myChart: '270085',
     },
     {   
         firstName:'Julie',
@@ -467,6 +484,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/julie-hoffman-pa-c/',
         inNetwork: true,
+        myChart: '267633',
     },
     {   
         firstName:'Nicholas',
@@ -493,6 +511,7 @@ const PrimaryCareProviders = [
         title: 'FNP-C',
         src: 'https://perlmanclinic.com/ourteam/nicholas-kahl-fnp-c/',
         inNetwork: true,
+        myChart: '98164',
     },
     {   
         firstName:'Stephanie',
@@ -519,6 +538,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/stephanie-klein-pa-c/',
         inNetwork: true,
+        myChart: '257289',
     },
     {   
         firstName:'Natalia',
@@ -545,6 +565,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/natalia-kovaleski-pa-c/',
         inNetwork: true,
+        myChart: '278112',
     },
     {   
         firstName:'Ilan',
@@ -571,6 +592,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/ilan-kuperman-md/',
         inNetwork: true,
+        myChart: '16808',
     },
     {   
         firstName:'Melissa',
@@ -597,6 +619,7 @@ const PrimaryCareProviders = [
         title: 'DO',
         src: 'https://perlmanclinic.com/ourteam/melissa-macy-do/',
         inNetwork: true,
+        myChart: '82466',
     },
     {   
         firstName:'Paul',
@@ -623,6 +646,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/paul-marquis-m-d/',
         inNetwork: true,
+        myChart: '279810',
     },
     {   
         firstName:'ChristyAnne',
@@ -649,6 +673,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/christyanne-maxson-m-d/',
         inNetwork: true,
+        myChart: '98016',
     },
     {   
         firstName:'Brenna',
@@ -675,6 +700,7 @@ const PrimaryCareProviders = [
         title: 'AGNP',
         src: 'https://perlmanclinic.com/ourteam/brenna-memole-agnp-c/',
         inNetwork: true,
+        myChart: '269350',
     },
     {   
         firstName:'Nicole',
@@ -701,6 +727,7 @@ const PrimaryCareProviders = [
         title: 'FNP',
         src: 'https://perlmanclinic.com/ourteam/nicole-michael/',
         inNetwork: true,
+        myChart: '280127',
     },
     {   
         firstName:'Kristen',
@@ -727,6 +754,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/kristen-mott-pa-c/',
         inNetwork: true,
+        myChart: '282508',
     },
     {   
         firstName:'Seymour',
@@ -753,6 +781,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/seymour-myers-m-d/',
         inNetwork: true,
+        myChart: '05073',
     },
     {   
         firstName:'Brooke',
@@ -779,6 +808,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/brooke-myrberg-pa-c/',
         inNetwork: true,
+        myChart: '271056',
     },
     {   
         firstName:'Kenneth',
@@ -805,6 +835,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/kenneth-ortiz-m-d/',
         inNetwork: true,
+        myChart: '270059',
     },
     {   
         firstName: 'Emilia',
@@ -831,6 +862,7 @@ const PrimaryCareProviders = [
         title: 'DO',
         src: 'https://perlmanclinic.com/ourteam/emilia-parrott-do/',
         inNetwork: true,
+        myChart: '270103',
     },
     {   
         firstName:'Monica',
@@ -857,6 +889,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/dr-monica-perlman/',
         inNetwork: true,
+        myChart: '08899',
     },
     {   
         firstName:'Jennifer',
@@ -883,6 +916,7 @@ const PrimaryCareProviders = [
         title: 'FNP',
         src: 'https://perlmanclinic.com/ourteam/jennifer-phan-fnp-c/',
         inNetwork: true,
+        myChart: '34455',
     },
     {   
         firstName:'Sarah',
@@ -909,6 +943,7 @@ const PrimaryCareProviders = [
         title: 'FNP',
         src: 'https://perlmanclinic.com/ourteam/sarah-pierce-fnp-c/',
         inNetwork: true,
+        myChart: '35697',
     },
     {   
         firstName:'William',
@@ -935,6 +970,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/mirza-raheem-m-d/',
         inNetwork: true,
+        myChart: '01975',
     },
     {   
         firstName:'Mirza',
@@ -961,6 +997,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/mirza-raheem-m-d/',
         inNetwork: true,
+        myChart: '279880',
     },
     {   
         firstName:'Georgina',
@@ -987,6 +1024,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: '',
         inNetwork: true,
+        myChart: '263319',
     },
     {   
         firstName:'Philippa',
@@ -1013,6 +1051,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/philippa-rai-pa-c/',
         inNetwork: true,
+        myChart: '272253',
     },
     {   
         firstName:'Jessica',
@@ -1039,6 +1078,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/jessica-sarder-pa-c/',
         inNetwork: true,
+        myChart: '97632',
     },
     {   
         firstName:'Adam',
@@ -1065,6 +1105,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/adam-shults-pa-c/',
         inNetwork: true,
+        myChart: '278020',
     },
     {   
         firstName:'Kelly',
@@ -1091,6 +1132,7 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/kelly-snowden-pa-c/',
         inNetwork: true,
+        myChart: '270097',
     },
     {   
         firstName:'Youstina',
@@ -1117,6 +1159,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/youstina-soliman-m-d/',
         inNetwork: true,
+        myChart: '277986',
     },
     {   
         firstName:'Anna',
@@ -1143,6 +1186,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/anna-stern-m-d/',
         inNetwork: true,
+        myChart: '51404',
     },
     {   
         firstName:'Jamie',
@@ -1169,6 +1213,7 @@ const PrimaryCareProviders = [
         title: 'DO',
         src: 'https://perlmanclinic.com/ourteam/dr-jamie-switzer/',
         inNetwork: true,
+        myChart: '14436',
     },
     {   
         firstName:'Susan',
@@ -1195,6 +1240,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/susan-taylor-m-d/',
         inNetwork: true,
+        myChart: '257284',
     },
     {   
         firstName:'Rhodaline',
@@ -1221,6 +1267,7 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/rhodaline-tootell-m-d/',
         inNetwork: true,
+        myChart: '272234',
     },
     {   
         firstName:'Yuliya',
@@ -1247,6 +1294,7 @@ const PrimaryCareProviders = [
         title: 'FNP-C',
         src: 'https://perlmanclinic.com/ourteam/yuliya-yartseva-fnp-c/',
         inNetwork: true,
+        myChart: '263890',
     }
 
 ];

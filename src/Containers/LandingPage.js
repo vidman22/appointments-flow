@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import { compose, withProps } from "recompose";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import LocationTitle from '../Components/LocationTitle/LocationTitle';
+
 
 // import MarkerClusterer from "react-google-maps/lib/components/addons/MarkerClusterer";
 
@@ -47,6 +49,7 @@ export class LandingPage extends Component {
       this.state = {
         link: '',
         name: '',
+        toggle: false,
       }
     }
 
@@ -54,13 +57,14 @@ export class LandingPage extends Component {
       console.log("clicked", name, link);
       this.setState({
         name,
-        link
+        link,
+        toggle: true,
       })
     }
     render() {
         return (
             <div className="LocationsLandingWrapper">
-                <h1>{this.state.name}</h1>
+                <LocationTitle title={this.state.name} toggle={this.state.toggle}/>
                 <div className="LocationsFlex">
                     <Iframe 
                       url={this.state.link}
