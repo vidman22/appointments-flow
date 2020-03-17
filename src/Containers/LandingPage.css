@@ -1,48 +1,5 @@
-.LocationsLandingWrapper{
+.AppointmentsLandingWrapper{
     display: block;
-   
-}
-
-.gm-style{
-    display: inline-block;
-
-    /* -webkit-transform: rotateX( 45deg )!important;
-    -moz-transform: rotateX( 45deg ) !important;
-    -o-transform: rotateX( 45deg ) !important;
-    transform: rotateX( 45deg ) !important; */
-    /* -ms-transform: rotate(-3deg); IE 9 */
-    /* transform: rotate(-3deg); */
-}
-.MapContainerElement{
-    /* display: inline-block; */
-    height: 660px;
-    width: 50%;
-    margin: 0 0 0 0; 
-}
-
-
-.IframeLocationMyChart{
-    /* float: left; */
-    /* display: inline-block; */
-    margin: 0;
-    width: 50%;
-    height: 660px;
-    border: none;
-}
-
-.LocationsFlex{
-    display: flex;
-    flex-direction: row;
-}
-
-.CheckBoxFlex{
-    display: flex;
-    flex-direction: column;
-}
-
-.CheckBoxFlex div{
-    margin: 12px 20px;
-}
-.CheckBoxFlex input{
-    margin: 0 12px;
+    width: 96%;
+    margin: auto;
 }

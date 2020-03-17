@@ -1,0 +1,22 @@
+.MapContainerElement{
+    /* display: inline-block; */
+    height: 660px;
+    width: 50%;
+    margin: 0 0 0 0; 
+}
+
+.LocationsFlex{
+    display: flex;
+    flex-direction: row;
+}
+
+.gm-style{
+    display: inline-block;
+
+    /* -webkit-transform: rotateX( 45deg )!important;
+    -moz-transform: rotateX( 45deg ) !important;
+    -o-transform: rotateX( 45deg ) !important;
+    transform: rotateX( 45deg ) !important; */
+    /* -ms-transform: rotate(-3deg); IE 9 */
+    /* transform: rotate(-3deg); */
+}

@@ -1,0 +1,14 @@
+.NextButton{
+    font-size: 1rem;
+    padding: 10px 10px 11px 10px;
+    border: none;
+    background-color: #55ba80;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+}
+
+.NextButton:hover{
+    color: black;
+}
