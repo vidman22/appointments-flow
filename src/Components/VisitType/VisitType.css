@@ -16,6 +16,9 @@
 .CheckBoxFlex span{
     margin: 12px 20px;
 }
+.CheckBoxFlex div{
+    margin: 6px 55px;
+}
 .CheckBoxFlex label{
     cursor: pointer;
     width: fit-content;
@@ -65,7 +68,7 @@
     -ms-transform:  rotate(0deg) scale(1);
     transform: rotate(0deg) scale(1);
     opacity: 1;
-    border: 1px solid #grey;
+    border: 1px solid #55ba80;
 }
 
 .VisitTypeCheckBox input:checked ~ .CustomCheckbox::after {
@@ -81,4 +84,8 @@
     border-width: 0 2px 2px 0;
     background-color: transparent;
     border-radius: 0;
+}
+
+.VisitTypeButton{
+    margin: 22px 3% 12px;
 }

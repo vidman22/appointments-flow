@@ -3,12 +3,14 @@ import React from 'react';
 
 import Iframe from 'react-iframe';
 
-const Providers = () => {
+const Providers = (props) => {
     return (
         <Iframe 
-            url={`${initialString}${allProviders}${this.state.myChartID}${defaultLocationVisitType}${endString}`}
-            width="45%"
-            height="800px"
+            url={props.url}
+            // url={`${initialString}${allProviders}${this.state.myChartID}${defaultLocationVisitType}${endString}`}
+            height="900px"
+            width="100%"
+            frameBorder="0"
             className="IframeLocationMyChart"
         />
     );

@@ -1,3 +1,5 @@
+import * as locationTypes from './LocationTypes';
+
 const PrimaryCareProviders = [
 
     {
@@ -25,11 +27,12 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/carly-babis-pa-c/',
         inNetwork: true,
-        myChart: '270075',
+        myChartID: '270075',
+        locations: [locationTypes.HILLCREST.id, locationTypes.DOWNTOWN_SAN_DIEGO.id]
     },
     {
-        firstNirstName: 'Puneet',
-        LastName: 'Bhalrhu',
+        firstName: 'Puneet',
+        lastName: 'Bhalrhu',
         DEA: 'FB6062599',
         license: 'A158762',
         NPI:'1174962898',
@@ -52,7 +55,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/puneet-bhalrhu-md/',
         inNetwork: true,
-        myChart: '273037',
+        myChartID: '273037',
+        locations: [locationTypes.HILLCREST.id, locationTypes.DOWNTOWN_SAN_DIEGO.id]
     },
     {   
         firstName:'Madalasa',
@@ -79,7 +83,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/madalasa-bista-m-d/', 
         inNetwork: true,
-        myChart: '39702',
+        myChartID: '39702',
+        locations: [locationTypes.LA_JOLLA_XIMED.id]
     },
     {   
         firstName:'Kelsey',
@@ -106,7 +111,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/kelsey-brangoccio-pa-c/', 
         inNetwork: true,
-        myChart: '267386',
+        myChartID: '267386',
+        locations: [locationTypes.KENSINGTON.id]
     },
     {   
         firstName:'Edward',
@@ -133,7 +139,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/dr-edward-brantz/',
         inNetwork: true,
-        myChart: '06405',
+        myChartID: '06405',
+        locations: [locationTypes.CLAIREMONT.id]
     },
     {   
         firstName:'Robert',
@@ -160,7 +167,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/robert-brunst-m-d/',
         inNetwork: true,
-        myChart: '08670',
+        myChartID: '08670',
+        locations: [locationTypes.ENCINITAS.id]
     },
     {   
         firstName:'William',
@@ -187,7 +195,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/william-buchner-m-d/',
         inNetwork: true,
-        myChart: '60830',
+        myChartID: '60830',
+        locations: [locationTypes.HILLCREST.id]
     },
     {
         firstName: 'Lauren',
@@ -214,7 +223,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/lauren-campagna-pa/',
         inNetwork: true,
-        myChart: '40112',
+        myChartID: '40112',
+        locations: [locationTypes.DOWNTOWN_SAN_DIEGO.id, locationTypes.LA_JOLLA_XIMED.id]
     },
     {   
         firstName:'Nicholas',
@@ -241,7 +251,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/nicholas-canelo-m-d/',
         inNetwork: true,
-        myChart: '65521',
+        myChartID: '65521',
+        locations: [locationTypes.LA_JOLLA_DOWNTOWN.id]
     },
     {   
         firstName:'Erinn',
@@ -268,7 +279,8 @@ const PrimaryCareProviders = [
         title: 'FNP-C',
         src: 'https://perlmanclinic.com/ourteam/erinn-case-fnp-c/',
         inNetwork: true,
-        myChart: '270607',
+        myChartID: '270607',
+        locations: [locationTypes.CLAIREMONT.id]
     },
     {   
         firstName:'Stephen',
@@ -295,7 +307,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/stephen-caso-pa/',
         inNetwork: true,
-        myChart: '82085',
+        myChartID: '82085',
+        locations: [locationTypes.LA_JOLLA_XIMED.id]
     },
     {   
         firstName:'Christopher',
@@ -322,7 +335,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/christopher-ceriale-pa-c/',
         inNetwork: true,
-        myChart: '263353',
+        myChartID: '263353',
+        locations: []
     },
     {   
         firstName:'Alonso',
@@ -349,7 +363,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/alonso-chan-pa-c/',
         inNetwork: true,
-        myChart: '84690',
+        myChartID: '84690',
+        locations: [locationTypes.CHULA_VISTA.id]
     },
     {   
         firstName:'Alexandra',
@@ -376,7 +391,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/alexandra-chatfield-pa-c/',
         inNetwork: true,
-        myChart: '278907',
+        myChartID: '278907',
+        locations: []
     },
     {   
         firstName:'Gourab',
@@ -403,7 +419,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/gourab-das-pa-c/',
         inNetwork: true,
-        myChart: '262694',
+        myChartID: '262694',
+        locations: [locationTypes.ENCINITAS.id]
     },
     {   
         firstName:'Emily',
@@ -430,7 +447,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/emily-ence-pa/',
         inNetwork: true,
-        myChart: '84615',
+        myChartID: '84615',
+        locations: [locationTypes.HILLCREST.id]
     },
     {   
         firstName:'Neenah',
@@ -457,7 +475,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: '',
         inNetwork: true,
-        myChart: '270085',
+        myChartID: '270085',
+        locations: [locationTypes.HILLCREST.id]
     },
     {   
         firstName:'Julie',
@@ -484,7 +503,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/julie-hoffman-pa-c/',
         inNetwork: true,
-        myChart: '267633',
+        myChartID: '267633',
+        locations: [locationTypes.HILLCREST.id]
     },
     {   
         firstName:'Nicholas',
@@ -511,7 +531,8 @@ const PrimaryCareProviders = [
         title: 'FNP-C',
         src: 'https://perlmanclinic.com/ourteam/nicholas-kahl-fnp-c/',
         inNetwork: true,
-        myChart: '98164',
+        myChartID: '98164',
+        locations: [locationTypes.DEL_MAR.id]
     },
     {   
         firstName:'Stephanie',
@@ -538,7 +559,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/stephanie-klein-pa-c/',
         inNetwork: true,
-        myChart: '257289',
+        myChartID: '257289',
+        locations: [locationTypes.CARLSBAD.id]
     },
     {   
         firstName:'Natalia',
@@ -565,7 +587,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/natalia-kovaleski-pa-c/',
         inNetwork: true,
-        myChart: '278112',
+        myChartID: '278112',
+        locations: [locationTypes.DEL_MAR.id]
     },
     {   
         firstName:'Ilan',
@@ -592,7 +615,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/ilan-kuperman-md/',
         inNetwork: true,
-        myChart: '16808',
+        myChartID: '16808',
+        locations: [locationTypes.LA_JOLLA_XIMED.id]
     },
     {   
         firstName:'Melissa',
@@ -619,7 +643,8 @@ const PrimaryCareProviders = [
         title: 'DO',
         src: 'https://perlmanclinic.com/ourteam/melissa-macy-do/',
         inNetwork: true,
-        myChart: '82466',
+        myChartID: '82466',
+        locations: [locationTypes.DOWNTOWN_SAN_DIEGO.id, locationTypes.CLAIREMONT.id]
     },
     {   
         firstName:'Paul',
@@ -646,7 +671,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/paul-marquis-m-d/',
         inNetwork: true,
-        myChart: '279810',
+        myChartID: '279810',
+        locations: [locationTypes.LA_MESA.id]
     },
     {   
         firstName:'ChristyAnne',
@@ -673,7 +699,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/christyanne-maxson-m-d/',
         inNetwork: true,
-        myChart: '98016',
+        myChartID: '98016',
+        locations: [locationTypes.LA_JOLLA_XIMED.id, locationTypes.DEL_MAR.id]
     },
     {   
         firstName:'Brenna',
@@ -700,7 +727,8 @@ const PrimaryCareProviders = [
         title: 'AGNP',
         src: 'https://perlmanclinic.com/ourteam/brenna-memole-agnp-c/',
         inNetwork: true,
-        myChart: '269350',
+        myChartID: '269350',
+        locations: [locationTypes.LA_JOLLA_XIMED.id]
     },
     {   
         firstName:'Nicole',
@@ -727,7 +755,8 @@ const PrimaryCareProviders = [
         title: 'FNP',
         src: 'https://perlmanclinic.com/ourteam/nicole-michael/',
         inNetwork: true,
-        myChart: '280127',
+        myChartID: '280127',
+        locations: [locationTypes.DEL_MAR.id, locationTypes.KENSINGTON.id, locationTypes.HILLCREST.id]
     },
     {   
         firstName:'Kristen',
@@ -754,7 +783,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/kristen-mott-pa-c/',
         inNetwork: true,
-        myChart: '282508',
+        myChartID: '282508',
+        locations: []
     },
     {   
         firstName:'Seymour',
@@ -781,7 +811,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/seymour-myers-m-d/',
         inNetwork: true,
-        myChart: '05073',
+        myChartID: '05073',
+        locations: [locationTypes.CARLSBAD.id]
     },
     {   
         firstName:'Brooke',
@@ -808,7 +839,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/brooke-myrberg-pa-c/',
         inNetwork: true,
-        myChart: '271056',
+        myChartID: '271056',
+        locations: [locationTypes.HILLCREST.id, locationTypes.KENSINGTON.id]
     },
     {   
         firstName:'Kenneth',
@@ -835,7 +867,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/kenneth-ortiz-m-d/',
         inNetwork: true,
-        myChart: '270059',
+        myChartID: '270059',
+        locations: [locationTypes.HILLCREST.id, locationTypes.DOWNTOWN_SAN_DIEGO.id]
     },
     {   
         firstName: 'Emilia',
@@ -862,7 +895,8 @@ const PrimaryCareProviders = [
         title: 'DO',
         src: 'https://perlmanclinic.com/ourteam/emilia-parrott-do/',
         inNetwork: true,
-        myChart: '270103',
+        myChartID: '270103',
+        locations: [locationTypes.KENSINGTON.id]
     },
     {   
         firstName:'Monica',
@@ -889,7 +923,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/dr-monica-perlman/',
         inNetwork: true,
-        myChart: '08899',
+        myChartID: '08899',
+        locations: [locationTypes.LA_JOLLA_XIMED.id, locationTypes.LA_JOLLA_DOWNTOWN.id]
     },
     {   
         firstName:'Jennifer',
@@ -916,7 +951,8 @@ const PrimaryCareProviders = [
         title: 'FNP',
         src: 'https://perlmanclinic.com/ourteam/jennifer-phan-fnp-c/',
         inNetwork: true,
-        myChart: '34455',
+        myChartID: '34455',
+        locations: []
     },
     {   
         firstName:'Sarah',
@@ -943,7 +979,8 @@ const PrimaryCareProviders = [
         title: 'FNP',
         src: 'https://perlmanclinic.com/ourteam/sarah-pierce-fnp-c/',
         inNetwork: true,
-        myChart: '35697',
+        myChartID: '35697',
+        locations: []
     },
     {   
         firstName:'William',
@@ -970,7 +1007,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/mirza-raheem-m-d/',
         inNetwork: true,
-        myChart: '01975',
+        myChartID: '01975',
+        locations: [locationTypes.LA_MESA.id]
     },
     {   
         firstName:'Mirza',
@@ -997,7 +1035,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/mirza-raheem-m-d/',
         inNetwork: true,
-        myChart: '279880',
+        myChartID: '279880',
+        locations: [locationTypes.LA_JOLLA_XIMED.id]
     },
     {   
         firstName:'Georgina',
@@ -1024,7 +1063,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: '',
         inNetwork: true,
-        myChart: '263319',
+        myChartID: '263319',
+        locations: []
     },
     {   
         firstName:'Philippa',
@@ -1051,7 +1091,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/philippa-rai-pa-c/',
         inNetwork: true,
-        myChart: '272253',
+        myChartID: '272253',
+        locations: []
     },
     {   
         firstName:'Jessica',
@@ -1078,7 +1119,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/jessica-sarder-pa-c/',
         inNetwork: true,
-        myChart: '97632',
+        myChartID: '97632',
+        locations: []
     },
     {   
         firstName:'Adam',
@@ -1105,7 +1147,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/adam-shults-pa-c/',
         inNetwork: true,
-        myChart: '278020',
+        myChartID: '278020',
+        locations: []
     },
     {   
         firstName:'Kelly',
@@ -1132,7 +1175,8 @@ const PrimaryCareProviders = [
         title: 'PA-C',
         src: 'https://perlmanclinic.com/ourteam/kelly-snowden-pa-c/',
         inNetwork: true,
-        myChart: '270097',
+        myChartID: '270097',
+        locations: [locationTypes.LA_JOLLA_DOWNTOWN.id]
     },
     {   
         firstName:'Youstina',
@@ -1159,7 +1203,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/youstina-soliman-m-d/',
         inNetwork: true,
-        myChart: '277986',
+        myChartID: '277986',
+        locations: [locationTypes.DEL_MAR.id]
     },
     {   
         firstName:'Anna',
@@ -1186,7 +1231,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/anna-stern-m-d/',
         inNetwork: true,
-        myChart: '51404',
+        myChartID: '51404',
+        locations: [locationTypes.LA_JOLLA_XIMED.id]
     },
     {   
         firstName:'Jamie',
@@ -1213,7 +1259,8 @@ const PrimaryCareProviders = [
         title: 'DO',
         src: 'https://perlmanclinic.com/ourteam/dr-jamie-switzer/',
         inNetwork: true,
-        myChart: '14436',
+        myChartID: '14436',
+        locations: [locationTypes.DEL_MAR.id, locationTypes.LA_JOLLA_XIMED.id]
     },
     {   
         firstName:'Susan',
@@ -1240,7 +1287,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/susan-taylor-m-d/',
         inNetwork: true,
-        myChart: '257284',
+        myChartID: '257284',
+        locations: [locationTypes.KENSINGTON.id]
     },
     {   
         firstName:'Rhodaline',
@@ -1267,7 +1315,8 @@ const PrimaryCareProviders = [
         title: 'MD',
         src: 'https://perlmanclinic.com/ourteam/rhodaline-tootell-m-d/',
         inNetwork: true,
-        myChart: '272234',
+        myChartID: '272234',
+        locations: [locationTypes.CARLSBAD.id, locationTypes.LA_JOLLA_XIMED.id]
     },
     {   
         firstName:'Yuliya',
@@ -1294,7 +1343,8 @@ const PrimaryCareProviders = [
         title: 'FNP-C',
         src: 'https://perlmanclinic.com/ourteam/yuliya-yartseva-fnp-c/',
         inNetwork: true,
-        myChart: '263890',
+        myChartID: '263890',
+        locations: [locationTypes.CLAIREMONT.id]
     }
 
 ];

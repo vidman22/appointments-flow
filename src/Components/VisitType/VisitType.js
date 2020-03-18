@@ -1,10 +1,14 @@
 import React from 'react';
 
 import NextButton from '../commonUI/NextButton';
+import { withRouter} from 'react-router';
+
 
 import './VisitType.css';
 
 const VisitType = (props) => {
+  const { match, location, history } = props;
+  console.log("props dynamic type", props.dynamicURL, match.params.id, location.pathname, history);
     return (
       <div className="CheckBoxWrapper">
         <div className="CheckBoxFlex">
@@ -17,8 +21,8 @@ const VisitType = (props) => {
                 name='firstTime'>
               </input>
               <span className="CustomCheckbox"></span>
+              <div>{props.firsttime ? 'yes' : 'no' }</div>
             </label>
-              {props.firsttime ? 'yes' : 'no' }
             
             <span>Is this for your Annual Physical Exam?</span>
             <label className="VisitTypeCheckBox" onClick={(e) => props.changeinput(e)}>
@@ -28,12 +32,14 @@ const VisitType = (props) => {
                 name='annualPhysical'>
               </input>
               <span className="CustomCheckbox"></span>
+              <div>{props.annualphysical ? 'yes' : 'no' }</div>
             </label>
-              {props.annualphysical ? 'yes' : 'no' }
         </div>
-        <NextButton onclick={props.next('location')} />
+        <div className="VisitTypeButton">
+          <NextButton name='Next' changecomponent={() => props.changecomponent('location')} />
+        </div>
       </div>
     );
 }
 
-export default VisitType;
+export default withRouter(VisitType);

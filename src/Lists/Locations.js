@@ -1,6 +1,8 @@
-const Locations = [
-    {
-        name: "Encinitas",
+import * as locationTypes from './LocationTypes';
+
+const Locations = {
+    [locationTypes.ENCINITAS.id] : {
+        name: locationTypes.ENCINITAS.name,
         address: "477 N El Camino Real",	
         suite: "A200",
         city: "Encinitas",
@@ -16,10 +18,10 @@ const Locations = [
             Quest: '#92024183',
             Sharp: 'TBD',
         },
-        myChartID: "54219023"
-    },					
-    {
-        name: "La Mesa",
+        myChartID: locationTypes.ENCINITAS.id
+    },
+    [locationTypes.LA_MESA.id] : {
+        name: locationTypes.LA_MESA.name,
         address: "6386 Alvarado Ct",	
         suite: "#101",
         city: "San Diego",
@@ -35,10 +37,10 @@ const Locations = [
             Quest: '#92120118',
             Sharp: 'TBD',
         },
-        myChartID: "54220023"
+        myChartID: locationTypes.LA_MESA.id
     },					
-    {
-        name: "Del Mar",
+    [locationTypes.DEL_MAR.id] : {
+        name: locationTypes.DEL_MAR.name,
         address: "12843 El Camino Real",	
         suite: "#203",
         city: "San Diego",
@@ -54,10 +56,10 @@ const Locations = [
             Quest: '#92130043',
             Sharp: '#42265',
         },
-        myChartID: "54207023"
+        myChartID: locationTypes.DEL_MAR.id
     },					
-    {
-        name: "Downtown San Diego",
+    [locationTypes.DOWNTOWN_SAN_DIEGO.id] : {
+        name: locationTypes.DOWNTOWN_SAN_DIEGO.name,
         address: "555 W C St.",	
         suite: "#102",
         city: "San Diego",
@@ -73,10 +75,10 @@ const Locations = [
             Quest: '#92101049',
             Sharp: '#92101049',
         },
-        myChartID: "54209023"
+        myChartID: locationTypes.DOWNTOWN_SAN_DIEGO.id
     },
-    {
-        name: "Chula Vista",
+    [locationTypes.CHULA_VISTA.id] : {
+        name: locationTypes.CHULA_VISTA.name,
         address: "299 J St",	
         suite: "#102",
         city: "Chula Vista",
@@ -92,10 +94,10 @@ const Locations = [
             Quest: '#91910098',
             Sharp: '#42264',
         },
-        myChartID: "54208023"
+        myChartID: locationTypes.CHULA_VISTA.id
     },					
-    {
-        name: "Downtown La Jolla",
+    [locationTypes.LA_JOLLA_DOWNTOWN.id]:{
+        name: locationTypes.LA_JOLLA_DOWNTOWN.name,
         address: "7855 Ivanhoe Ave",	
         suite: "#110",
         city: "La Jolla",
@@ -111,10 +113,10 @@ const Locations = [
             Quest: '#92037166',
             Sharp: '#42268',
         },
-        myChartID: "54205023"
+        myChartID: locationTypes.LA_JOLLA_DOWNTOWN.id
     },					
-    {
-        name: "Carlsbad",
+    [locationTypes.CARLSBAD.id] : {
+        name: locationTypes.CARLSBAD.name,
         address: "1905 Calle Barcelona",	
         suite: "#211",
         city: "Carlsbad",
@@ -130,10 +132,10 @@ const Locations = [
             Quest: '#92009010',
             Sharp: '#42263',
         },
-        myChartID: "54206023"
+        myChartID: locationTypes.CARLSBAD.id
     },					
-    {
-        name: "Hillcrest",
+    [locationTypes.HILLCREST.id]:{
+        name: locationTypes.HILLCREST.name,
         address: "3900 Fifth Ave",	
         suite: "#110",
         city: "San Diego",
@@ -149,10 +151,10 @@ const Locations = [
             Quest: '#92103554',
             Sharp: '#22345',
         },
-        myChartID: "54202023"
+        myChartID: locationTypes.HILLCREST.id
     },					
-    {
-        name: "Clairemont",
+    [locationTypes.CLAIREMONT.id] : {
+        name: locationTypes.CLAIREMONT.name,
         address: "3737 Moraga Ave",	
         suite: "#B-103",
         city: "San Diego",
@@ -168,10 +170,10 @@ const Locations = [
             Quest: '#92117737',
             Sharp: '#22280',
         },
-        myChartID: "54204023"
+        myChartID: locationTypes.CLAIREMONT.id
     },					
-    {
-        name: "Kensington",
+    [locationTypes.KENSINGTON.id] : {
+        name: locationTypes.KENSINGTON.name,
         address: "4142 Adams Ave",	
         suite: "#102",
         city: "San Diego",
@@ -187,10 +189,10 @@ const Locations = [
             Quest: '#04049060',
             Sharp: '#42267',
         },
-        myChartID: "54201023"
+        myChartID: locationTypes.KENSINGTON.id
     },
-    {
-        name: "La Jolla XiMED",
+    [locationTypes.LA_JOLLA_XIMED.id] : {
+        name: locationTypes.LA_JOLLA_XIMED.name,
         address: "9850 Genesee Ave",	
         suite: "#320",
         city: "La Jolla",
@@ -206,8 +208,8 @@ const Locations = [
             Quest: '#92037143',
             Sharp: '#22279',
         },
-        myChartID: "54203023"
+        myChartID: locationTypes.LA_JOLLA_XIMED.id
     }												
-]
+}
 
 export default Locations;

@@ -6,12 +6,12 @@ const ProgressBar = (props) => {
     return (
         <div className="ProgressBarWrapper">
             <ul className="ProgressBar">
-                <li className={props.renderedcomponent === 'visitType' ? 'active' : ''}>Visit Type</li>
-                <li className={props.renderedcomponent === 'location' ? 'active' : ''}>Location</li>
-                <li className={props.renderedcomponent === 'provider' ? 'active' : ''}>Provider</li>
+                <li className={props.renderedcomponent === 'location' || props.renderedcomponent === 'completed' || props.renderedcomponent === 'provider' ? 'active' : ''}>Visit Type</li>
+                <li className={props.renderedcomponent === 'provider'  ? 'active' : ''}>Location</li>
+                <li className={props.renderedcomponent === 'completed' ? 'active' : ''}>Provider</li>
+                <li className={props.renderedcomponent === 'completed' ? 'active' : ''}>Completed</li>
             </ul>
         </div>
-        
     );
 }
 
