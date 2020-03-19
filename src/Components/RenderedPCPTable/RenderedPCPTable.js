@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faUserMd} from '@fortawesome/free-solid-svg-icons';
+
+
 const RenderedPCPTable = (props) => {
     return (
             <table>
@@ -13,7 +17,7 @@ const RenderedPCPTable = (props) => {
                     return (
                         <tr>
                             <td>
-                                <img alt="Primary Care Physician" className="PCPListImg" src={pcp.img} height="50" width="50"/>
+                                {pcp.img ? <img alt="Primary Care Physician" className="PCPListImg" src={pcp.img} height="50" width="50"/> : <FontAwesomeIcon icon={faUserMd} size="2x" />}
                             </td>
                             <td>
                                 {pcp.firstName + ' ' + pcp.lastName}

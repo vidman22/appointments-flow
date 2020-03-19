@@ -9,7 +9,7 @@ import NextButton from '../../Components/commonUI/NextButton';
 import BackButton from '../../Components/commonUI/BackButton';
 import LocationTitle from '../../Components/LocationTitle/LocationTitle';
 import Locations from '../../Lists/Locations';
-import * as locationTypes from '../../Lists/LocationTypes';
+// import * as locationTypes from '../../Lists/LocationTypes';
 import Providers from '../../Lists/PCPs';
 
 
@@ -80,7 +80,6 @@ export class Location extends Component {
       let locations;
       let pcpName;
       if (this.props.pcpid){
-        console.log("pcp", this.props.pcpid);
         for (let i = 0; i < Providers.length; i++){
           if (this.props.pcpid === Providers[i].myChartID ){
             locations = Providers[i].locations;
@@ -97,7 +96,6 @@ export class Location extends Component {
           for (let k = 0; k < locations.length; k++){
             locationMessage += ' ' + locations[k].name;
           }
-          console.log("locations", locations);
           this.setState({
             title: locations.length ? `${pcpName}, works at these locations: ${locationMessage}` : `${pcpName}, might work at many locations, continue to the next step`,
           })
