@@ -101,8 +101,26 @@ export class Providers extends Component {
     }
 
     render() {
+        let formArray = [];
+        for (let key in this.state.filters){
+            let filtersArray = [];
+            for (let prop in this.state.filters[key]){
+                filtersArray.push({
+                    id: prop, 
+                    config: this.state.filters[key][prop]
+                })
+            }
+            formArray.push({
+                id: key,
+                config: filtersArray
+            })
+        }
+        // console.log("formArray", formArray);
+
         return (
+
             <div>
+               
                 <input 
                     onChange={(e) => this.onChange(e)}
                     type="text"
@@ -128,7 +146,7 @@ export class Providers extends Component {
             <span className="CustomCheckbox"></span>
             <div>Male</div>
             </label>
-                <RenderedPCPTable suggestions={this.state.suggestions} filters={this.state.filters}/>
+            <RenderedPCPTable suggestions={this.state.suggestions} filters={this.state.filters}/>
                 
             </div>
         );

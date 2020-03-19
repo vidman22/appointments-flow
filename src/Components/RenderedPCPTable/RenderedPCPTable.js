@@ -7,6 +7,7 @@ import {faUserMd} from '@fortawesome/free-solid-svg-icons';
 const RenderedPCPTable = (props) => {
     return (
             <table>
+                <tbody>
                 <tr>
                     <th></th>
                     <th>Name</th>
@@ -15,7 +16,7 @@ const RenderedPCPTable = (props) => {
                 </tr>
                 {props.suggestions.length ? props.suggestions.map(pcp => {
                     return (
-                        <tr>
+                        <tr key={Math.random()}>
                             <td>
                                 {pcp.img ? <img alt="Primary Care Physician" className="PCPListImg" src={pcp.img} height="50" width="50"/> : <FontAwesomeIcon icon={faUserMd} size="2x" />}
                             </td>
@@ -31,6 +32,7 @@ const RenderedPCPTable = (props) => {
                         </tr>
                     )
                 }): null}
+                </tbody>
             </table>
     );
 }
