@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import PCPs from '../../Lists/PCPs';
 import RenderedPCPTable from '../../Components/RenderedPCPTable/RenderedPCPTable';
+import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import './Providers.css';
 
 const getSuggestions = value => {
     let inputValue = value.trim().toLowerCase();
@@ -29,57 +33,62 @@ const getSuggestions = value => {
     } 
     return suggestions = suggestions.filter((a, b) => suggestions.indexOf(a) === b );;
 }
-
+let index = 0;
 export class Providers extends Component {
     constructor(props){
         super(props);
         this.state = {
+            gender:false,
+            care: false,
+            type: false,
+            language: false,
+            specialty: false,
             filters: {
                 gender: {
-                    male: {name: 'Male', checked: ''},
-                    female: {name: 'Female', checked: ''},
+                    male: {name: 'Male', checked: false},
+                    female: {name: 'Female', checked: false},
                 },
                 care : {
-                    sutureRemoval: {name: 'Suture Removal', checked: ''},
-                    suturePlacement: {name: 'Suture Placement', checked: ''},
-                    IUDRemoval: {name: 'IUD Removal', checked: ''},
-                    IUDPlacement: {name: 'IUD Placement', checked: ''},
-                    nexplanonPlacement: {name: 'Nexplanon Placement', checked: ''},
-                    nexplanonRemoval: {name: 'Nexplanon Removal', checked: ''},
+                    sutureRemoval: {name: 'Suture Removal', checked: false},
+                    suturePlacement: {name: 'Suture Placement', checked: false},
+                    IUDRemoval: {name: 'IUD Removal', checked: false},
+                    IUDPlacement: {name: 'IUD Placement', checked: false},
+                    nexplanonPlacement: {name: 'Nexplanon Placement', checked: false},
+                    nexplanonRemoval: {name: 'Nexplanon Removal', checked: false},
                 },
                 type: {
-                    DO:{name: 'DO', checked: ''},
-                    MD:{name: 'MD', checked: ''},
-                    NP:{name: 'NP', checked: ''},
-                    PA:{name: 'PA', checked: ''},
+                    DO:{name: 'DO', checked: false},
+                    MD:{name: 'MD', checked: false},
+                    NP:{name: 'NP', checked: false},
+                    PA:{name: 'PA', checked: false},
                 },
                 languages:{
-                    arabic: {name: 'Arabic', checked: '' },
-                    dutch: {name: 'Dutch', checked: '' },
-                    german: {name: 'German', checked: '' },
-                    hindi: {name: 'Hindi', checked: '' },
-                    nepali: {name: 'Nepali', checked: '' },
-                    polish: {name: 'Polish', checked: '' },
-                    russian: {name: 'Russian', checked: '' },
-                    spanish: {name: 'Spanish', checked: '' },
-                    tagolog: {name: 'Tagolog', checked: '' },
-                    vietnamese: {name: 'Vietnamese', checked: '' },
+                    arabic: {name: 'Arabic', checked: false },
+                    dutch: {name: 'Dutch', checked: false },
+                    german: {name: 'German', checked: false },
+                    hindi: {name: 'Hindi', checked: false },
+                    nepali: {name: 'Nepali', checked: false },
+                    polish: {name: 'Polish', checked: false },
+                    russian: {name: 'Russian', checked: false },
+                    spanish: {name: 'Spanish', checked: false },
+                    tagolog: {name: 'Tagolog', checked: false },
+                    vietnamese: {name: 'Vietnamese', checked: false },
                 },
                 specialty: {
-                    familyMedicine: {name: 'Family Medicine', checked: ''},
-                    preventativeMedicine: {name: 'Preventative Medicine', checked: ''},
-                    internalMedicine: {name: 'Internal Medicine', checked: ''},
-                    integrativeMedicine: {name: 'Integrative Medicine', checked: ''},
-                    aestheticMedicine: {name: 'Aesthetic Medicine', checked: ''},
-                    geriatricMedicine: {name: 'Geriatrics', checked: ''},
-                    emergencyMedicine: {name: 'Emergency Medicine', checked: ''},
-                    chronicCare: {name: 'Chronic Care', checked: ''},
-                    mentalHealth: {name: 'Mental Health', checked: ''},
-                    gerontology: {name: 'Gerontology', checked: ''},
-                    hospice: {name: 'Hospice', checked: ''},
-                    womensHealth: {name: "Womens' Health", checked: ''},
-                    reproductiveHealth: {name: 'Reproductive Health', checked: ''},
-                    orthopedics: {name: 'Orthopedics', checked: ''},
+                    familyMedicine: {name: 'Family Medicine', checked: false},
+                    preventativeMedicine: {name: 'Preventative Medicine', checked: false},
+                    internalMedicine: {name: 'Internal Medicine', checked: false},
+                    integrativeMedicine: {name: 'Integrative Medicine', checked: false},
+                    aestheticMedicine: {name: 'Aesthetic Medicine', checked: false},
+                    geriatricMedicine: {name: 'Geriatrics', checked: false},
+                    emergencyMedicine: {name: 'Emergency Medicine', checked: false},
+                    chronicCare: {name: 'Chronic Care', checked: false},
+                    mentalHealth: {name: 'Mental Health', checked: false},
+                    gerontology: {name: 'Gerontology', checked: false},
+                    hospice: {name: 'Hospice', checked: false},
+                    womensHealth: {name: "Womens' Health", checked: false},
+                    reproductiveHealth: {name: 'Reproductive Health', checked: false},
+                    orthopedics: {name: 'Orthopedics', checked: false},
                 },
             },
             value: '',
@@ -92,12 +101,37 @@ export class Providers extends Component {
             suggestions: getSuggestions(e.target.value),
         })
     }
-    onFilterChange = (event) => {
-        const target = event.target;
-        const name = target.name;
+    onFilterChange = (formID, filterID) => {
+        index++;
+        console.log("index", index);
+
+        console.log("form", formID, filterID);
+        const updatedFilters = {...this.state.filters};
+        const updatedCategory = {...updatedFilters[formID]};
+        const updatedFilter = {...updatedCategory[filterID]}
+        
+        
+        updatedFilter.checked = !updatedFilter.checked;
+        
+        
+        updatedCategory[filterID] = updatedFilter;
+        // console.log("updatedCategory", updatedCategory);
+        updatedFilters[formID]  = updatedCategory;
+        console.log("updatedFilters", updatedFilters);
+        this.setState({
+            filters: updatedFilters,
+        })
+        // this.setState( prevState => {
+        //     return {[name]: !prevState[name]}
+        // });
+    }
+
+    toggleFilterHeader = (type) => {
+
         this.setState( prevState => {
-            return {[name]: !prevState[name]}
+            return { [type]: !prevState[type]}
         });
+
     }
 
     render() {
@@ -115,11 +149,33 @@ export class Providers extends Component {
                 config: filtersArray
             })
         }
-        // console.log("formArray", formArray);
+        // console.log("formArray");
 
         return (
 
             <div>
+                <div className="FilterSideBar">
+                
+                    {formArray.map(form => {
+                        return <div  key={form.id}>
+                            <div className="SideBarFilterHeader" onClick={() => this.toggleFilterHeader(form.id)}>
+                                {form.id} <FontAwesomeIcon icon={this.state[form.id] ? faCaretDown : faCaretRight} />
+                            </div>
+                            {this.state[form.id] && form.config.map( filter => {
+                               return  <label key={filter.id} className="VisitTypeCheckBox">
+                                    <input
+                                        onChange={() => this.onFilterChange( form.id, filter.id )}
+                                        type="checkbox"
+                                        checked={filter.config.checked}
+                                        name={filter.id}>
+                                    </input>
+                                        <span className="CustomCheckbox"></span>
+                                <div>{filter.config.name}</div>
+                                </label>
+                            })}
+                        </div>
+                    })}
+                </div>
                
                 <input 
                     onChange={(e) => this.onChange(e)}
@@ -128,24 +184,7 @@ export class Providers extends Component {
                     placeholder="Search by name"
                     name="value"
                 />
-                <label className="VisitTypeCheckBox" onClick={(e) => this.onFilterChange(e)}>
-                <input
-                    type="checkbox"
-                    defaultChecked={this.state.female}
-                    name='female'>
-                </input>
-                    <span className="CustomCheckbox"></span>
-                    <div>Female</div>
-                </label>
-                <label className="VisitTypeCheckBox" onClick={(e) => this.onFilterChange(e)}>
-                <input
-                    type="checkbox"
-                    defaultChecked={this.state.male}
-                    name='male'>
-                </input>
-            <span className="CustomCheckbox"></span>
-            <div>Male</div>
-            </label>
+
             <RenderedPCPTable suggestions={this.state.suggestions} filters={this.state.filters}/>
                 
             </div>
@@ -154,10 +193,3 @@ export class Providers extends Component {
 }
 
 export default Providers;
- // <Iframe 
-        //     url={props.url}
-        //     height="900px"
-        //     width="100%"
-        //     frameBorder="0"
-        //     className="IframeLocationMyChart"
-        // />
