@@ -37,7 +37,7 @@ const getSuggestions = value => {
       }   
     }
   } 
-  return suggestions = suggestions.filter((a, b) => suggestions.indexOf(a) === b );;
+  return suggestions = suggestions.filter((a, b) => suggestions.indexOf(a) === b );
 }
 
 const getSuggestionValue = suggestion => suggestion.name;

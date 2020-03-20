@@ -1,31 +1,54 @@
 import React from 'react';
 
+// import PCPs from '../../Lists/PCPs';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faUserMd} from '@fortawesome/free-solid-svg-icons';
 
 
 const RenderedPCPTable = (props) => {
-    const {suggestions, filters} = props;
-    console.log("filters", filters);
+    let {suggestions, filters} = props;
+    let filteredSuggestions = [];
     for (let prop in filters){
         switch(prop){
             case 'gender':
-                console.log("filter", filters[prop]);
+
+                if (filters[prop].male.checked){
+                   filteredSuggestions = suggestions.filter(sugg => sugg.gender === filters[prop].male.checked);
+                } else {
+                    filteredSuggestions = suggestions;
+                }
+
+            break;
+            case 'title':
+                if (filters[prop].NP.checked){
+                    filteredSuggestions = filteredSuggestions.filter(sugg => sugg.title === filters[prop].NP.checked)
+                }
+
             break;
             case 'care':
-                console.log("filter", filters[prop]);
-            break;
-            case 'type':
-                console.log("filter", filters[prop]);
+                for (let key in filters[prop]){
+                    if (filters[prop][key].checked){
+                        filteredSuggestions = filteredSuggestions.filter(sugg => sugg.care[key]);
+                    }
+                }
             break;
             case 'languages':
-                console.log("filter", filters[prop]);
+                if (filters[prop].arabic.checked){
+                    filteredSuggestions = filteredSuggestions.filter(sugg => sugg.language[filters[prop].arabic.checked])
+                }
+
             break;
             case 'specialty':
-                console.log("filter", filters[prop]);
+                if (filters[prop].familyMedicine.checked){
+                    filteredSuggestions = filteredSuggestions.filter(sugg => sugg.specialty[filters[prop].familyMedicine.checked])
+                }
+            break;
+            default:
             break;
         }
     }
+
     return (
             <table>
                 <tbody>
@@ -35,7 +58,7 @@ const RenderedPCPTable = (props) => {
                         <th>Title</th>
                         <th>Specialty</th>
                     </tr>
-                    {suggestions.length ? suggestions.map(pcp => {
+                    {filteredSuggestions.length ? filteredSuggestions.map(pcp => {
                         return (
                             <tr key={Math.random()}>
                                 <td>

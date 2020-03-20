@@ -11,7 +11,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: [],
+        language: {},
         specialInterests: ['Internal Medicine'],
         specialty: {
             familyMedicine: '',
@@ -22,7 +22,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -34,7 +34,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/CarlyBabisMain.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/carly-babis-pa-c/',
         inNetwork: true,
         myChartID: '270075',
@@ -49,7 +49,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Family Practice '],
         specialty: {
             familyMedicine: true,
@@ -60,7 +60,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: 'knee',
@@ -87,7 +87,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 1,
         ageLimitUrgentCare: 1,
-        language: ['Nepali'],
+        language: {nepali: true},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -98,7 +98,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: 'knee',
@@ -125,7 +125,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 3,
         ageLimitUrgentCare: 3,
-        language: [],
+        language: {},
         specialInterests: ['Preventive Health', 'lifestyle changes'],
         specialty: {
             familyMedicine: '',
@@ -136,7 +136,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: 'major joint',
@@ -148,7 +148,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/Kelsey500x500-1024x1024.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/kelsey-brangoccio-pa-c/', 
         inNetwork: true,
         myChartID: '267386',
@@ -163,7 +163,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 5,
         ageLimitUrgentCare: 5,
-        language: ['Spanish'],
+        language: {spanish: true},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -174,7 +174,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -201,7 +201,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: ['Spanish', 'Dutch', 'German'],
+        language: {spanish: true, dutch: true, german: true},
         specialInterests: ['Internal Medicine'],
         specialty: {
             familyMedicine: '',
@@ -212,7 +212,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy presciptions only',
             newPTAnnuals: true,
             joint: 'major joint',
@@ -239,7 +239,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 5,
         ageLimitUrgentCare: 5,
-        language: [],
+        language: {},
         specialInterests: ['Integrative Medicine'],
         specialty: {
             familyMedicine: '',
@@ -250,7 +250,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: false,
             joint: 'any',
@@ -277,7 +277,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 4,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine', 'Aesthetic Medicine'],
         specialty: {
             familyMedicine: true,
@@ -288,7 +288,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -300,7 +300,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/fp_milestone-create-1384638-1.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/lauren-campagna-pa/',
         inNetwork: true,
         myChartID: '40112',
@@ -315,7 +315,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 1,
         ageLimitUrgentCare: 1,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine', 'Integrative Medicine'],
         specialty: {
             familyMedicine: true,
@@ -326,7 +326,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: 'major joint',
@@ -353,7 +353,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -364,7 +364,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: 'any',
@@ -376,7 +376,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/ErinnCase500x500.jpg',
-        title: 'FNP-C',
+        title: 'NP',
         src: 'https://perlmanclinic.com/ourteam/erinn-case-fnp-c/',
         inNetwork: true,
         myChartID: '270607',
@@ -391,7 +391,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 12,
         ageLimitUrgentCare: 12,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -402,7 +402,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -414,7 +414,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/PC_provider3.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/stephen-caso-pa/',
         inNetwork: true,
         myChartID: '82085',
@@ -429,7 +429,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: [],
+        language: {},
         specialInterests: ['Reproductive health', 'PREP/ HIV/AIDS specialist'],
         specialty: {
             familyMedicine: true,
@@ -441,7 +441,7 @@ const PrimaryCareProviders = [
             emergencyMedicine: '',
             reproductiveHealth: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: '',
@@ -453,7 +453,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/09/Chris500x500.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/christopher-ceriale-pa-c/',
         inNetwork: true,
         myChartID: '263353',
@@ -468,7 +468,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: ['Spanish'],
+        language: {spanish: true},
         specialInterests: ['Family Medicine', 'Emergency Medicine', 'Womens Health', 'Orthopedics'],
         specialty: {
             familyMedicine: true,
@@ -481,7 +481,7 @@ const PrimaryCareProviders = [
             womensHealth: true,
             orthopedics: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: 'majore joint',
@@ -493,7 +493,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/AlonsoChan.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/alonso-chan-pa-c/',
         inNetwork: true,
         myChartID: '84690',
@@ -508,7 +508,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Internal Medicine'],
         specialty: {
             familyMedicine: '',
@@ -519,7 +519,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'No controlled substances',
             newPTAnnuals: true,
             joint: 'knee',
@@ -531,7 +531,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/12/AlexandraChatfield500x500.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/alexandra-chatfield-pa-c/',
         inNetwork: true,
         myChartID: '278907',
@@ -546,7 +546,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: ['Hindi'],
+        language: {hindi: true},
         specialInterests: ['Internal Medicine '],
         specialty: {
             familyMedicine: '',
@@ -557,7 +557,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: 'knee',
@@ -569,7 +569,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/12/GourabDas500x500.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/gourab-das-pa-c/',
         inNetwork: true,
         myChartID: '262694',
@@ -584,7 +584,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 12,
         ageLimitUrgentCare: 12,
-        language: [],
+        language: {},
         specialInterests: ['Preventive Medicine', 'lifestyle changes'],
         specialty: {
             familyMedicine: '',
@@ -595,7 +595,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -607,7 +607,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/PC_provider4-300x300.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/emily-ence-pa/',
         inNetwork: true,
         myChartID: '84615',
@@ -622,7 +622,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine', 'Emergency Medicine'],
         specialty: {
             familyMedicine: true,
@@ -633,7 +633,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'No controlled substances',
             newPTAnnuals: true,
             joint: '',
@@ -645,7 +645,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: '',
-        title: 'PA-C',
+        title: 'PA',
         src: '',
         inNetwork: true,
         myChartID: '270085',
@@ -660,7 +660,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Peventative Medicine', 'lifestyle changes', 'patient education'],
         specialty: {
             familyMedicine: '',
@@ -671,7 +671,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -683,7 +683,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/JulieHoffmanPhoto.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/julie-hoffman-pa-c/',
         inNetwork: true,
         myChartID: '267633',
@@ -698,7 +698,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -709,7 +709,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: 'knee, shoulder',
@@ -721,7 +721,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/12/NicholasKahl500x500.jpg',
-        title: 'FNP-C',
+        title: 'NP',
         src: 'https://perlmanclinic.com/ourteam/nicholas-kahl-fnp-c/',
         inNetwork: true,
         myChartID: '98164',
@@ -736,7 +736,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 5,
         ageLimitUrgentCare: 5,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine', 'HIV/AIDS/PREP', 'Hormone therapy'],
         specialty: {
             familyMedicine: true,
@@ -748,7 +748,7 @@ const PrimaryCareProviders = [
             emergencyMedicine: '',
             reproductiveHealth: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -760,7 +760,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/StephanieKleinPHOTO-1.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/stephanie-klein-pa-c/',
         inNetwork: true,
         myChartID: '257289',
@@ -775,7 +775,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 0,
-        language: ['Spanish'],
+        language: {spanish: true},
         specialInterests: ['Internal Medicine', 'chronic care management', 'preventive health'],
         specialty: {
             familyMedicine: '',
@@ -787,7 +787,7 @@ const PrimaryCareProviders = [
             emergencyMedicine: '',
             chronicCare: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: 'major joint',
@@ -799,7 +799,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/11/Natalia500x500.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/natalia-kovaleski-pa-c/',
         inNetwork: true,
         myChartID: '278112',
@@ -814,7 +814,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: ['Spanish'],
+        language: {spanish: true},
         specialInterests: ['Integrative Medicine'],
         specialty: {
             familyMedicine: '',
@@ -825,7 +825,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -852,7 +852,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 5,
         ageLimitUrgentCare: 5,
-        language: [],
+        language: {},
         specialInterests: ['Osteopathic Manipulation', 'Family Medicine', 'Orthopedics'],
         specialty: {
             familyMedicine: true,
@@ -864,7 +864,7 @@ const PrimaryCareProviders = [
             emergencyMedicine: '',
             orthopedics: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: 'any',
@@ -891,7 +891,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -902,7 +902,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: 'major joint',
@@ -929,7 +929,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Womens Health', 'Young Families'],
         specialty: {
             familyMedicine: true,
@@ -941,7 +941,7 @@ const PrimaryCareProviders = [
             emergencyMedicine: '',
             womensHealth: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -968,7 +968,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: [],
+        language: {},
         specialInterests: ['Gerontology', 'lifestyle modifications', 'weightloss', 'nutrition', 'preventive health'],
         specialty: {
             familyMedicine: '',
@@ -980,7 +980,7 @@ const PrimaryCareProviders = [
             emergencyMedicine: '',
             gerontology: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -992,7 +992,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/BrennaMemole.jpg',
-        title: 'AGNP',
+        title: 'NP',
         src: 'https://perlmanclinic.com/ourteam/brenna-memole-agnp-c/',
         inNetwork: true,
         myChartID: '269350',
@@ -1007,7 +1007,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 16,
         ageLimitUrgentCare: 16,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine', 'Emergency Medicine'],
         specialty: {
             familyMedicine: true,
@@ -1018,7 +1018,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: '',
@@ -1030,7 +1030,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2020/02/NicoleMichael500x500.jpg',
-        title: 'FNP',
+        title: 'NP',
         src: 'https://perlmanclinic.com/ourteam/nicole-michael/',
         inNetwork: true,
         myChartID: '280127',
@@ -1045,7 +1045,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 5,
         ageLimitUrgentCare: 5,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -1056,7 +1056,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: '',
@@ -1068,7 +1068,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2020/02/KristenMott500x500.jpeg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/kristen-mott-pa-c/',
         inNetwork: true,
         myChartID: '282508',
@@ -1083,7 +1083,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine', 'hospice', 'end of life planning'],
         specialty: {
             familyMedicine: true,
@@ -1094,8 +1094,9 @@ const PrimaryCareProviders = [
             geriatricMedicine: true,
             emergencyMedicine: '',
             hospice: true,
+            gerontology: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -1122,7 +1123,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 10,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -1133,7 +1134,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -1145,7 +1146,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/BrookeMyrberg500x500.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/brooke-myrberg-pa-c/',
         inNetwork: true,
         myChartID: '271056',
@@ -1160,7 +1161,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: ['Pidgin'],
+        language: {pidgin: true},
         specialInterests: ['Aesthetic Medicine', 'Geriatrics'],
         specialty: {
             familyMedicine: '',
@@ -1171,8 +1172,9 @@ const PrimaryCareProviders = [
             geriatricMedicine: true,
             emergencyMedicine: '',
             reproductiveHealth: true,
+            gerontology: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: 'major joint',
@@ -1199,7 +1201,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: ['Polish'],
+        language: {polish: true},
         specialInterests: ['Family Medicine', 'HIV/AIDS'],
         specialty: {
             familyMedicine: true,
@@ -1211,7 +1213,7 @@ const PrimaryCareProviders = [
             emergencyMedicine: '',
             reproductiveHealth: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: 'any',
@@ -1238,7 +1240,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 13,
         ageLimitUrgentCare: 13,
-        language: ['Spanish'],
+        language: {spanish: true},
         specialInterests: ['Internal Medicine', 'Preventive Medicine', 'Aestheic Medicine'],
         specialty: {
             familyMedicine: '',
@@ -1249,7 +1251,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -1276,7 +1278,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: ['Vietnamese', 'Spanish'],
+        language: {vietnamese: true, spanish: true },
         specialInterests: ['Internal Medicine', 'Emergency Medicine'],
         specialty: {
             familyMedicine: '',
@@ -1287,7 +1289,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -1299,7 +1301,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/09/JenniferP500x500.jpg',
-        title: 'FNP',
+        title: 'NP',
         src: 'https://perlmanclinic.com/ourteam/jennifer-phan-fnp-c/',
         inNetwork: true,
         myChartID: '34455',
@@ -1314,7 +1316,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Preventive Medicine'],
         specialty: {
             familyMedicine: '',
@@ -1325,7 +1327,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -1337,7 +1339,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/Sarah-Pierce.jpg',
-        title: 'FNP',
+        title: 'NP',
         src: 'https://perlmanclinic.com/ourteam/sarah-pierce-fnp-c/',
         inNetwork: true,
         myChartID: '35697',
@@ -1352,7 +1354,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: [],
+        language: {},
         specialInterests: ['Interventional Cardiology', 'Internal Medicine'],
         specialty: {
             familyMedicine: '',
@@ -1363,7 +1365,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: 'major joint',
@@ -1374,9 +1376,9 @@ const PrimaryCareProviders = [
             nexplanonPlacement: false,
             nexplanonRemoval: false,
         },
-        img: 'https://perlmanclinic.com/wp-content/uploads/2020/01/Raheem500x500.jpeg',
+        img: '',
         title: 'MD',
-        src: 'https://perlmanclinic.com/ourteam/mirza-raheem-m-d/',
+        src: '',
         inNetwork: true,
         myChartID: '01975',
         locations: [locationTypes.LA_MESA.id]
@@ -1387,10 +1389,10 @@ const PrimaryCareProviders = [
         DEA: 'AR7353042',
         license: 'C140215',
         NPI:'1609886647',
-        gender: 'female',
+        gender: 'male',
         ageLimitPrimary: 16,
         ageLimitUrgentCare: 16,
-        language: [],
+        language: {},
         specialInterests: ['Internal Medicine'],
         specialty: {
             familyMedicine: '',
@@ -1401,7 +1403,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: '',
@@ -1428,7 +1430,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 16,
         ageLimitUrgentCare: 16,
-        language: [],
+        language: {},
         specialInterests: ['Preventive Medicine', 'Womens Health', 'PREP', 'Patient Education'],
         specialty: {
             familyMedicine: '',
@@ -1441,7 +1443,7 @@ const PrimaryCareProviders = [
             womensHealth: true,
             reproductiveHealth: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: 'any',
@@ -1453,7 +1455,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: '',
-        title: 'PA-C',
+        title: 'PA',
         src: '',
         inNetwork: true,
         myChartID: '263319',
@@ -1468,7 +1470,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 10,
         ageLimitUrgentCare: 10,
-        language: [],
+        language: {},
         specialInterests: ['Preventive Medicine', 'Womens Health', 'mental health', 'laceration repair', 'in office procedures'],
         specialty: {
             familyMedicine: '',
@@ -1481,7 +1483,7 @@ const PrimaryCareProviders = [
             womensHealth: true,
             mentalHealth: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: false,
             joint: '',
@@ -1493,7 +1495,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/Pippa500by500-1024x1024.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/philippa-rai-pa-c/',
         inNetwork: true,
         myChartID: '272253',
@@ -1508,7 +1510,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 18,
-        language: ['Spanish'],
+        language: {spanish: true},
         specialInterests: ['Internal Medicine', 'Emergency Medicine', 'PREP/HIV/AIDS'],
         specialty: {
             familyMedicine: '',
@@ -1520,7 +1522,7 @@ const PrimaryCareProviders = [
             emergencyMedicine: true,
             reproductiveHealth: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -1532,7 +1534,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/JessicaSarderPhoto.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/jessica-sarder-pa-c/',
         inNetwork: true,
         myChartID: '97632',
@@ -1547,7 +1549,7 @@ const PrimaryCareProviders = [
         gender: 'male',
         ageLimitPrimary: 1,
         ageLimitUrgentCare: 1,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine', 'Emergency Medicine', 'PREP/HIV/AIDS'],
         specialty: {
             familyMedicine: true,
@@ -1559,7 +1561,7 @@ const PrimaryCareProviders = [
             emergencyMedicine: true,
             reproductiveHealth: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: 'major joint',
@@ -1571,7 +1573,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/10/Adam500x500.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/adam-shults-pa-c/',
         inNetwork: true,
         myChartID: '278020',
@@ -1586,7 +1588,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: [],
+        language: {},
         specialInterests: ['Preventive Medicine', 'Emergency Medicine'],
         specialty: {
             familyMedicine: '',
@@ -1597,7 +1599,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -1609,7 +1611,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: false,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/KellySnowden.jpg',
-        title: 'PA-C',
+        title: 'PA',
         src: 'https://perlmanclinic.com/ourteam/kelly-snowden-pa-c/',
         inNetwork: true,
         myChartID: '270097',
@@ -1624,7 +1626,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 18,
         ageLimitUrgentCare: 12,
-        language: ['Arabic'],
+        language: {arabic: true},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -1635,7 +1637,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: 'Hard copy prescriptions only',
             newPTAnnuals: true,
             joint: 'major joint',
@@ -1662,7 +1664,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 16,
         ageLimitUrgentCare: 16,
-        language: [],
+        language: {},
         specialInterests: ['Public Health', 'Preventative Medicine'],
         specialty: {
             familyMedicine: '',
@@ -1673,7 +1675,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -1700,7 +1702,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 14,
         ageLimitUrgentCare: 14,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -1711,7 +1713,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: 'major joint',
@@ -1738,7 +1740,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 3,
         ageLimitUrgentCare: 3,
-        language: [],
+        language: {},
         specialInterests: ['Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -1749,7 +1751,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -1776,7 +1778,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 0,
         ageLimitUrgentCare: 0,
-        language: ['Tagalog'],
+        language: {tagolog: true},
         specialInterests: ['Preventive Medicine', 'chronic conditions', 'womens health', 'pediatrics'],
         specialty: {
             familyMedicine: true,
@@ -1789,7 +1791,7 @@ const PrimaryCareProviders = [
             womensHealth: true,
             chronicCare: true,
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: true,
             joint: '',
@@ -1816,7 +1818,7 @@ const PrimaryCareProviders = [
         gender: 'female',
         ageLimitPrimary: 16,
         ageLimitUrgentCare: 16,
-        language: ['Russian'],
+        language: {russian: true},
         specialInterests: ['Preventive Medicine', 'Family Medicine'],
         specialty: {
             familyMedicine: true,
@@ -1827,7 +1829,7 @@ const PrimaryCareProviders = [
             geriatricMedicine: '',
             emergencyMedicine: '',
         },
-        careExceptions: {
+        care: {
             medicationRefills: '',
             newPTAnnuals: false,
             joint: '',
@@ -1839,7 +1841,7 @@ const PrimaryCareProviders = [
             nexplanonRemoval: true,
         },
         img: 'https://perlmanclinic.com/wp-content/uploads/2019/06/Yuliya-PA-C-1.jpg',
-        title: 'FNP-C',
+        title: 'NP',
         src: 'https://perlmanclinic.com/ourteam/yuliya-yartseva-fnp-c/',
         inNetwork: true,
         myChartID: '263890',

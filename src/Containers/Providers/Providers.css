@@ -1,19 +1,12 @@
-.IframeLocationMyChart{
-    /* float: left; */
-    /* display: inline-block; */
-    margin: 0;
-    width: 50%;
-    height: 660px;
-    border: none;
-}
 
 .FilterSideBar{
-    width: 202px;
+    /* width: 202px; */
     background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
     /* margin-left: 0px; */
     padding: 8px 8px;
-    position: fixed;
-    z-index: 1;
     top: 90px;
     left: 1.2em;
     max-height: 900px;
@@ -25,4 +18,15 @@
     -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
     -webkit-user-select: none; /* Chrome, Safari, and Opera */
     -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+.SideBarFilterHeader{
+    margin: auto;
+    padding: 10px 70px;
+}
+
+.ProviderSearchInput{
+    width: 20%;
+    margin: 0 0 0 0%;
+
 }

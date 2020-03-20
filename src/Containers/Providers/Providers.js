@@ -33,7 +33,7 @@ const getSuggestions = value => {
     } 
     return suggestions = suggestions.filter((a, b) => suggestions.indexOf(a) === b );;
 }
-let index = 0;
+
 export class Providers extends Component {
     constructor(props){
         super(props);
@@ -45,51 +45,52 @@ export class Providers extends Component {
             specialty: false,
             filters: {
                 gender: {
-                    male: {name: 'Male', checked: false},
-                    female: {name: 'Female', checked: false},
+                    male: {name: 'Male', type: "radio", checked: ''},
+                    female: {name: 'Female', type: "radio", checked: ''},
                 },
-                care : {
-                    sutureRemoval: {name: 'Suture Removal', checked: false},
-                    suturePlacement: {name: 'Suture Placement', checked: false},
-                    IUDRemoval: {name: 'IUD Removal', checked: false},
-                    IUDPlacement: {name: 'IUD Placement', checked: false},
-                    nexplanonPlacement: {name: 'Nexplanon Placement', checked: false},
-                    nexplanonRemoval: {name: 'Nexplanon Removal', checked: false},
-                },
-                type: {
-                    DO:{name: 'DO', checked: false},
-                    MD:{name: 'MD', checked: false},
-                    NP:{name: 'NP', checked: false},
-                    PA:{name: 'PA', checked: false},
-                },
-                languages:{
-                    arabic: {name: 'Arabic', checked: false },
-                    dutch: {name: 'Dutch', checked: false },
-                    german: {name: 'German', checked: false },
-                    hindi: {name: 'Hindi', checked: false },
-                    nepali: {name: 'Nepali', checked: false },
-                    polish: {name: 'Polish', checked: false },
-                    russian: {name: 'Russian', checked: false },
-                    spanish: {name: 'Spanish', checked: false },
-                    tagolog: {name: 'Tagolog', checked: false },
-                    vietnamese: {name: 'Vietnamese', checked: false },
+                title: {
+                    DO:{name: 'DO', type: "radio", checked: ''},
+                    MD:{name: 'MD', type: "radio", checked: ''},
+                    NP:{name: 'NP', type: "radio", checked: ''},
+                    PA:{name: 'PA', type: "radio", checked: ''},
                 },
                 specialty: {
-                    familyMedicine: {name: 'Family Medicine', checked: false},
-                    preventativeMedicine: {name: 'Preventative Medicine', checked: false},
-                    internalMedicine: {name: 'Internal Medicine', checked: false},
-                    integrativeMedicine: {name: 'Integrative Medicine', checked: false},
-                    aestheticMedicine: {name: 'Aesthetic Medicine', checked: false},
-                    geriatricMedicine: {name: 'Geriatrics', checked: false},
-                    emergencyMedicine: {name: 'Emergency Medicine', checked: false},
-                    chronicCare: {name: 'Chronic Care', checked: false},
-                    mentalHealth: {name: 'Mental Health', checked: false},
-                    gerontology: {name: 'Gerontology', checked: false},
-                    hospice: {name: 'Hospice', checked: false},
-                    womensHealth: {name: "Womens' Health", checked: false},
-                    reproductiveHealth: {name: 'Reproductive Health', checked: false},
-                    orthopedics: {name: 'Orthopedics', checked: false},
+                    familyMedicine: {name: 'Family Medicine', type: "radio", checked: ''},
+                    preventativeMedicine: {name: 'Preventative Medicine', type: "radio", checked: ''},
+                    internalMedicine: {name: 'Internal Medicine', type: "radio", checked: ''},
+                    integrativeMedicine: {name: 'Integrative Medicine', type: "radio", checked: ''},
+                    aestheticMedicine: {name: 'Aesthetic Medicine', type: "radio", checked: ''},
+                    geriatricMedicine: {name: 'Geriatrics', type: "radio", checked: ''},
+                    emergencyMedicine: {name: 'Emergency Medicine', type: "radio", checked: ''},
+                    chronicCare: {name: 'Chronic Care', type: "radio", checked: ''},
+                    mentalHealth: {name: 'Mental Health', type: "radio", checked: ''},
+                    gerontology: {name: 'Gerontology', type: "radio", checked: ''},
+                    hospice: {name: 'Hospice', type: "radio", checked: ''},
+                    womensHealth: {name: "Womens' Health", type: "radio", checked: ''},
+                    reproductiveHealth: {name: 'Reproductive Health', type: "radio", checked: ''},
+                    orthopedics: {name: 'Orthopedics', type: "radio", checked: ''},
                 },
+                care : {
+                    sutureRemoval: {name: 'Suture Removal', type: "checkbox", checked: false},
+                    suturePlacement: {name: 'Suture Placement', type: "checkbox", checked: false},
+                    IUDRemoval: {name: 'IUD Removal', type: "checkbox", checked: false},
+                    IUDPlacement: {name: 'IUD Placement', type: "checkbox", checked: false},
+                    nexplanonPlacement: {name: 'Nexplanon Placement', type: "checkbox", checked: false},
+                    nexplanonRemoval: {name: 'Nexplanon Removal', type: "checkbox", checked: false},
+                },
+                languages:{
+                    arabic: {name: 'Arabic', type: "radio", checked: '' },
+                    dutch: {name: 'Dutch', type: "radio", checked: '' },
+                    german: {name: 'German', type: "radio", checked: '' },
+                    hindi: {name: 'Hindi', type: "radio", checked: '' },
+                    nepali: {name: 'Nepali', type: "radio", checked: '' },
+                    polish: {name: 'Polish', type: "radio", checked: '' },
+                    russian: {name: 'Russian', type: "radio", checked: '' },
+                    spanish: {name: 'Spanish', type: "radio", checked: '' },
+                    tagolog: {name: 'Tagolog', type: "radio", checked: '' },
+                    vietnamese: {name: 'Vietnamese', type: "radio", checked: '' },
+                },
+
             },
             value: '',
             suggestions: [],
@@ -101,29 +102,55 @@ export class Providers extends Component {
             suggestions: getSuggestions(e.target.value),
         })
     }
-    onFilterChange = (formID, filterID) => {
-        index++;
-        console.log("index", index);
+    onFilterChange = (formID, filterID, type) => {
 
-        console.log("form", formID, filterID);
+        // console.log("formId, filterID", formID, filterID);
         const updatedFilters = {...this.state.filters};
         const updatedCategory = {...updatedFilters[formID]};
-        const updatedFilter = {...updatedCategory[filterID]}
         
         
-        updatedFilter.checked = !updatedFilter.checked;
+        if (type === 'radio'){
+                for ( let key in updatedCategory){
+                    const updatedRadioFilter = {...updatedCategory[key]}
+                    updatedRadioFilter.checked = filterID;
+                    updatedCategory[key] = updatedRadioFilter;
+                    updatedFilters[formID]  = updatedCategory;
+                }
+
+            // console.log("Updated Category", updatedCategory);
+            
+        }
+        if (type === 'checkbox'){
+            const updatedFilter = {...updatedCategory[filterID]};
+
+            updatedFilter.checked = !updatedFilter.checked;
         
-        
-        updatedCategory[filterID] = updatedFilter;
-        // console.log("updatedCategory", updatedCategory);
-        updatedFilters[formID]  = updatedCategory;
-        console.log("updatedFilters", updatedFilters);
+            updatedCategory[filterID] = updatedFilter;
+            updatedFilters[formID]  = updatedCategory;
+        }
+
         this.setState({
             filters: updatedFilters,
         })
-        // this.setState( prevState => {
-        //     return {[name]: !prevState[name]}
-        // });
+    }
+
+    clear = (formID) =>{
+        const updatedFilters = {...this.state.filters};
+        const updatedCategory = {...updatedFilters[formID]};
+
+        for (let key in updatedCategory){
+            const updatedFilter = {...updatedCategory[key]}
+            updatedFilter.checked = false;
+            updatedCategory[key] = updatedFilter;
+            updatedFilters[formID]  = updatedCategory;
+        }
+                    
+        updatedFilters[formID]  = updatedCategory;
+
+        this.setState({
+            filters: updatedFilters,
+        })
+
     }
 
     toggleFilterHeader = (type) => {
@@ -149,7 +176,6 @@ export class Providers extends Component {
                 config: filtersArray
             })
         }
-        // console.log("formArray");
 
         return (
 
@@ -161,23 +187,41 @@ export class Providers extends Component {
                             <div className="SideBarFilterHeader" onClick={() => this.toggleFilterHeader(form.id)}>
                                 {form.id} <FontAwesomeIcon icon={this.state[form.id] ? faCaretDown : faCaretRight} />
                             </div>
+                            {this.state[form.id] && <div onClick={() => this.clear(form.id)}>clear filter</div>}
                             {this.state[form.id] && form.config.map( filter => {
-                               return  <label key={filter.id} className="VisitTypeCheckBox">
-                                    <input
-                                        onChange={() => this.onFilterChange( form.id, filter.id )}
-                                        type="checkbox"
-                                        checked={filter.config.checked}
-                                        name={filter.id}>
-                                    </input>
-                                        <span className="CustomCheckbox"></span>
-                                <div>{filter.config.name}</div>
-                                </label>
+                                // if (filter.config.type === "checkbox") {
+                                //     return (
+                                //          <label key={filter.id} className="VisitTypeCheckBox">
+                                //             <input
+                                //                 onChange={() => this.onFilterChange( form.id, filter.id, filter.config.type )}
+                                //                 type={filter.config.type}
+                                //                 checked={filter.config.checked}
+                                //                 name={filter.id}>
+                                //             </input>
+                                //             <span className="CustomCheckbox"></span>
+                                //             <div>{filter.config.name}</div>
+                                //         </label>
+                                // )} 
+                               
+                                    return (
+                                        <label key={filter.id} className={filter.config.type === 'radio' ? "VisitTypeRadio" : "VisitTypeCheckBox"}>
+                                            <input
+                                                onChange={() => this.onFilterChange( form.id, filter.id, filter.config.type )}
+                                                type={filter.config.type}
+                                                checked={filter.config.type === 'radio' ? (filter.config.checked === filter.id) : filter.config.checked}
+                                                name={filter.id}>
+                                            </input>
+                                                {filter.config.type === 'radio' && <span className="CustomRadio"></span>}
+                                            <div>{filter.config.name}</div>
+                                        </label>
+                                    )
                             })}
                         </div>
                     })}
                 </div>
                
                 <input 
+                    className="ProviderSearchInput"
                     onChange={(e) => this.onChange(e)}
                     type="text"
                     value={this.state.value}

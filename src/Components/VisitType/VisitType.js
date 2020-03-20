@@ -7,8 +7,7 @@ import { withRouter} from 'react-router';
 import './VisitType.css';
 
 const VisitType = (props) => {
-  const { match, location, history } = props;
-  console.log("props dynamic type", props.dynamicURL, match.params.id, location.pathname, history);
+  // const { match, location, history } = props;
     return (
       <div className="CheckBoxWrapper">
         <div className="CheckBoxFlex">
