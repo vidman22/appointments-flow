@@ -2,7 +2,7 @@
   "name": "appointments-flow",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://thawing-reef-83901.herokuapp.com/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
