@@ -179,43 +179,32 @@ export class Providers extends Component {
 
         return (
 
-            <div>
+            <div className="ProviderSearch">
                 <div className="FilterSideBar">
                 
                     {formArray.map(form => {
-                        return <div  key={form.id}>
+                        return <div className="FilterWrapper" key={form.id}>
                             <div className="SideBarFilterHeader" onClick={() => this.toggleFilterHeader(form.id)}>
                                 {form.id} <FontAwesomeIcon icon={this.state[form.id] ? faCaretDown : faCaretRight} />
                             </div>
-                            {this.state[form.id] && <div onClick={() => this.clear(form.id)}>clear filter</div>}
-                            {this.state[form.id] && form.config.map( filter => {
-                                // if (filter.config.type === "checkbox") {
-                                //     return (
-                                //          <label key={filter.id} className="VisitTypeCheckBox">
-                                //             <input
-                                //                 onChange={() => this.onFilterChange( form.id, filter.id, filter.config.type )}
-                                //                 type={filter.config.type}
-                                //                 checked={filter.config.checked}
-                                //                 name={filter.id}>
-                                //             </input>
-                                //             <span className="CustomCheckbox"></span>
-                                //             <div>{filter.config.name}</div>
-                                //         </label>
-                                // )} 
-                               
-                                    return (
-                                        <label key={filter.id} className={filter.config.type === 'radio' ? "VisitTypeRadio" : "VisitTypeCheckBox"}>
-                                            <input
-                                                onChange={() => this.onFilterChange( form.id, filter.id, filter.config.type )}
-                                                type={filter.config.type}
-                                                checked={filter.config.type === 'radio' ? (filter.config.checked === filter.id) : filter.config.checked}
-                                                name={filter.id}>
-                                            </input>
-                                                {filter.config.type === 'radio' && <span className="CustomRadio"></span>}
-                                            <div>{filter.config.name}</div>
-                                        </label>
-                                    )
-                            })}
+                            {this.state[form.id] && <div className="ClearFilter" onClick={() => this.clear(form.id)}>clear filter</div>}
+                            <div className="ListItems">
+                                {this.state[form.id] && form.config.map( filter => {
+                                
+                                        return (
+                                            <label key={filter.id} className={filter.config.type === 'radio' ? "VisitTypeRadio" : "VisitTypeCheckBox"}>
+                                                <input
+                                                    onChange={() => this.onFilterChange( form.id, filter.id, filter.config.type )}
+                                                    type={filter.config.type}
+                                                    checked={filter.config.type === 'radio' ? (filter.config.checked === filter.id) : filter.config.checked}
+                                                    name={filter.id}>
+                                                </input>
+                                                    {filter.config.type === 'checkbox' && <span className="CustomCheckbox"></span>}
+                                                <div className="ConfigName">{filter.config.name}</div>
+                                            </label>
+                                        )
+                                })}
+                            </div>
                         </div>
                     })}
                 </div>

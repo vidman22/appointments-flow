@@ -10,6 +10,7 @@ const VisitType = (props) => {
   // const { match, location, history } = props;
     return (
       <div className="CheckBoxWrapper">
+        <h1>Visit Type</h1>
         <div className="CheckBoxFlex">
                   
             <span>Have you been seen at any Perlman Clinic before?</span>
@@ -35,7 +36,7 @@ const VisitType = (props) => {
             </label>
         </div>
         <div className="VisitTypeButton">
-          <NextButton name='Next' changecomponent={() => props.changecomponent('location')} />
+          <NextButton name='Next' changecomponent={() => props.changecomponent('finalPage')} />
         </div>
       </div>
     );

@@ -61,20 +61,21 @@ export class Location extends Component {
             suggestions: [],
             link: '',
             locations: [],
+            location: false,
           }
     }
 
     componentDidMount(){
-      let locationName = '';
+      let location = '';
       if (this.props.locationid){
         for (const prop in Locations ){
           if (Locations[prop].myChartID === this.props.locationid){
-            locationName = Locations[prop].name;
+            location = Locations[prop];
           }
         }
-        console.log("this props location", locationName);
+        console.log("this props location", location);
         this.setState({
-          title: `Confirm ${locationName} as your desired clinic location`,
+          location
         })
       }
       let locations;
@@ -147,8 +148,14 @@ export class Location extends Component {
         this.input = autosuggest.input;
       }
   };
+
+  clearLocation = () =>{
+    this.setState({
+      location: '',
+    })
+  }
     render() {
-      const {suggestions, value} = this.state;
+      const {suggestions, value, location} = this.state;
       const inputProps = {
         placeholder:'Search Locations',
         value,
@@ -157,9 +164,19 @@ export class Location extends Component {
     };
         return (
             <div className="LocationsWrapper">
+              <BackButton content='font-awesome' changecomponent={() => this.props.changecomponent('visitType')} />
               <div className="LocationsFlex">
                 <div className="LocationSearch">
-                    <LocationTitle title={this.state.title} />
+                    {/* <LocationTitle title={this.state.title} /> */}
+                    {location ? (
+                      <div className="AddressDisplay">
+                      <h1>{location.name}</h1>
+                      <h4>Address</h4>
+                      <span>{location.address + ' ' + location.suite}</span>
+                      <span>{location.city}, {location.state} {location.zip}</span>
+        
+                    </div>
+                    ): 
                     <Autosuggest
                         focusInputOnSuggestionClick={!isMobile}
                         getSuggestionValue={getSuggestionValue}
@@ -173,8 +190,10 @@ export class Location extends Component {
                         shouldRenderSuggestions={() => true}
                         suggestions={suggestions}
                     />
+                    } 
                     <div className="ButtonWrappers">
-                      <BackButton changecomponent={() => this.props.changecomponent('visitType')} />
+                      
+                      <button className="ChooseAnotherLocation" onClick={()=> this.clearLocation()}>Choose Another Location</button>
                       <NextButton disabled={this.state.nextDisabled} name='Confirm' changecomponent={() => this.props.changecomponent('provider')} />
                     </div>
                 </div>

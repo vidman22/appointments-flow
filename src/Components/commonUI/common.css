@@ -16,6 +16,10 @@
     color: #55ba80;
     background-color: white;
     border: 1px solid #55ba80;
+    /* float: left; */
+    /* clear: both; */
+    margin: 0;
+
 }
 
 .NextButton:hover{

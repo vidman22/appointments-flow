@@ -4,12 +4,13 @@
     background: white;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: space-between;
     /* margin-left: 0px; */
     padding: 8px 8px;
     top: 90px;
     left: 1.2em;
-    max-height: 900px;
+    max-height: 300px;
+ 
     /* overflow: scroll; */
     box-shadow:0 0 9px #ccc;
     user-select: none;
@@ -21,12 +22,49 @@
 }
 
 .SideBarFilterHeader{
-    margin: auto;
-    padding: 10px 70px;
+    text-align: left;
+    cursor: pointer;
+    padding: 10px 0px 0 0px;
+}
+
+.FilterWrapper{
+    /* width: fit-content; */
+}
+
+.ListItems{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 180px;
+}
+
+.ClearFilter{
+    color: #55ba80;
+    cursor: pointer;
+    width: fit-content;
+}
+.ClearFilter:hover{
+    color: black;
 }
 
 .ProviderSearchInput{
     width: 20%;
     margin: 0 0 0 0%;
+}
 
+.VisitTypeRadio,
+.VisitTypeCheckbox{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: 1px;
+}
+
+.VisitTypeCheckbox{
+    margin: 5px;
+}
+
+.VisitTypeCheckBox .ConfigName{
+    position: relative;
+    left: 28px;
 }
