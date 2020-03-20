@@ -1,6 +1,6 @@
 .FinalPage{
     display: block;
-    width: 70%;
+    width: 760px;
     margin: auto;
     background-color: white;
     padding: 20px;
@@ -26,12 +26,18 @@
     width: fit-content;
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 760px){
+    .FinalPage{
+        width: 90%;
+        margin: auto;
+
+    }
+
     .IframeLocationMyChart{
         /* float: left; */
         /* display: inline-block; */
 
-        width: 100%;
+        width: 95%;
         /* height: 660px;
         border: none; */
     }
