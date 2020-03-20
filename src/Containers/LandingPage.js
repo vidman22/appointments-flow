@@ -37,13 +37,20 @@ export class LandingPage extends Component {
       let locationObject;
       let pcp;
 
+      // for (let i = 0; i < PCPs.length; i++){
+      //   console.log(PCPs[i].firstName + ' ' + PCPs[i].lastName + ' ' +`https://scheduler.perlmanclinic.com/pcpID/${PCPs[i].myChartID}`);
+      // }
+      // for (let key in Locations){
+      //   console.log(Locations[key].name + ' ' + `https://scheduler.perlmanclinic.com/locationID/${Locations[key].myChartID}`);
+      // }
+
       if (locationID){
         for (const prop in Locations ){
           if (Locations[prop].myChartID === locationID){
             locationObject = Locations[prop];
           }
         }
-        console.log("this props location", locationObject);
+  
         this.setState({
           location: locationObject
         })
@@ -110,7 +117,7 @@ export class LandingPage extends Component {
  
       
       const {renderedComponent, firstTime, annualPhysical, pcp, location } = this.state;
-      console.log("pcp", pcp);
+   
       const initialString	= "https://mychart.perlmanclinic.com/mpc/SignupAndSchedule/EmbeddedSchedule?id="
       const providers	= pcp ? pcp.myChartID : "270075,39702,12290,06405,60830,40112,65521,82085,84690,269588,84615,269811,270084,270085,270104,267633,257289,16808,270089,270108,98016,269350,05073,270103,08899,34455,35697,97632,270096,270097,51404,14436,257284,263086,263890,270654,270607,271056,272253,273037,267386,272234,270059,273570,82466,263319,40414,263353,278020,25406,277986,278112,278907,98164,08670,262694,279880,279810,280127"
       const locations =	location ? `&dept=${location.myChartID}` : `&dept=54208023,54204023,54207023,54209023,54202023,54201023,54205023,54203023,54219023,54220023`
