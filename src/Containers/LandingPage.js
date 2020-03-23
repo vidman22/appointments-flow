@@ -21,11 +21,12 @@ export class LandingPage extends Component {
   constructor(props){
     super(props);
       this.state = {
-        annualPhysical: true,
-        firstTime: true,
+        annualPhysical: 'officeVisit',
+        firstTime:'returnee',
         renderedComponent: 'visitType',
         location: null,
         pcp: null,
+        next: false,
       }
     }
 
@@ -71,13 +72,15 @@ export class LandingPage extends Component {
      
     }
 
-    changeInput = (event)=> {
+    changeInput = (event, type)=> {
       const target = event.target;
       const name = target.name;
     
       this.setState( prevState => {
-        return {[name]: !prevState[name]}
-      });  
+        return {[type]: name}
+      }); 
+      console.log("radio handle", name, type);
+
     }
 
     dynamicVisitType() {
@@ -101,7 +104,8 @@ export class LandingPage extends Component {
 
     changeComponent = (type) => {
       this.setState({
-        renderedComponent: type
+        renderedComponent: type,
+        next: true,
       })
     }
 
@@ -137,7 +141,7 @@ export class LandingPage extends Component {
                 
                 {/* {renderedComponent === 'provider' && <Providers alllocations={allLocations} pcpid={pcpID} changecomponent={this.changeComponent} url={url} />} */}
                 
-                {renderedComponent === 'visitType' && <VisitType changecomponent={this.changeComponent} changeinput={this.changeInput} firsttime={firstTime} annualphysical={annualPhysical} dynamicURL={this.dynamicVisitType()}/>}
+                {renderedComponent === 'visitType' && <VisitType changecomponent={this.changeComponent} next={this.state.next} changeinput={this.changeInput} firsttime={firstTime} annualphysical={annualPhysical} dynamicURL={this.dynamicVisitType()}/>}
                 {renderedComponent === 'finalPage'  && <FinalPage location={location} pcp={pcp} changecomponent={this.changeComponent} url={url} /> }
             </div>
         );
