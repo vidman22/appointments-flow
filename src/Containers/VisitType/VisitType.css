@@ -20,6 +20,23 @@
     overflow-y: hidden;
 
 }
+
+.QuestionWrapper p{
+    color: orange;
+    line-height: normal;
+    font-size: 16px;
+    margin: -10px 0 0 18px;
+    animation: reveal .6s ease-in forwards;
+}
+
+@keyframes reveal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 /*
 .CheckBoxFlex span{
     margin: 12px 20px;
@@ -159,7 +176,7 @@
       background: white;
   }
 
-.QuestionWrapper{
+/* .QuestionWrapper{
     display: block;
     -webkit-transition-duration: 600ms;
     transition-duration: 600ms;
@@ -173,4 +190,10 @@
 .QuestionWrapper .FirstTime:nth-child(even) {
     transform: translate(-100%);        
     -webkit-transform: translate(-100%);
+} */
+
+@media screen and (max-width: 530px){
+    .CheckBoxWrapper{
+        width: 90%;
+    }
 }

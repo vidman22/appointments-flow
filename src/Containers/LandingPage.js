@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router';
-import VisitType from '../Components/VisitType/VisitType';
+import VisitType from '../Containers/VisitType/VisitType';
 import FinalPage from '../Components/FinalPage/FinalPage';
 // import Location from './Location/Location';
 // import Providers from './Providers/Providers';
@@ -21,8 +21,6 @@ export class LandingPage extends Component {
   constructor(props){
     super(props);
       this.state = {
-        annualPhysical: 'officeVisit',
-        firstTime:'returnee',
         renderedComponent: 'visitType',
         location: null,
         pcp: null,
@@ -65,23 +63,9 @@ export class LandingPage extends Component {
         this.setState({
           pcp
         });
-      }
-
-      
-      
-     
+      }     
     }
 
-    changeInput = (event, type)=> {
-      const target = event.target;
-      const name = target.name;
-    
-      this.setState( prevState => {
-        return {[type]: name}
-      }); 
-      console.log("radio handle", name, type);
-
-    }
 
     dynamicVisitType() {
       //annual exam working
@@ -102,10 +86,21 @@ export class LandingPage extends Component {
       }
     }
 
+    visitTypeNext = (type) =>{
+      if (this.state.annualPhysical === ''){
+        this.setState({
+        })
+      }
+      else if (this.state.firstTime === ''){
+
+      } else {
+        this.changeComponent(type);
+      }
+    }
+
     changeComponent = (type) => {
       this.setState({
         renderedComponent: type,
-        next: true,
       })
     }
 
@@ -141,7 +136,7 @@ export class LandingPage extends Component {
                 
                 {/* {renderedComponent === 'provider' && <Providers alllocations={allLocations} pcpid={pcpID} changecomponent={this.changeComponent} url={url} />} */}
                 
-                {renderedComponent === 'visitType' && <VisitType changecomponent={this.changeComponent} next={this.state.next} changeinput={this.changeInput} firsttime={firstTime} annualphysical={annualPhysical} dynamicURL={this.dynamicVisitType()}/>}
+                {renderedComponent === 'visitType' && <VisitType changecomponent={this.visitTypeNext} />}
                 {renderedComponent === 'finalPage'  && <FinalPage location={location} pcp={pcp} changecomponent={this.changeComponent} url={url} /> }
             </div>
         );

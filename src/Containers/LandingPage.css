@@ -3,3 +3,16 @@
     width: 96%;
     margin: auto;
 }
+
+@media screen and (max-width: 620px){
+    .AppointmentsLandingWrapper{
+        width: 96%;
+        margin: 2px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .AppointmentsLandingWrapper{
+        margin: 0;
+    }
+}
