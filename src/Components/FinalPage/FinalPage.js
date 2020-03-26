@@ -2,8 +2,6 @@ import React from 'react';
 
 import BackButton from '../commonUI/BackButton';
 
-import Iframe from 'react-iframe';
-
 import './FinalPage.css';
 
 const FinalPage = (props) => {
@@ -19,6 +17,7 @@ const FinalPage = (props) => {
                    className="IframeLocationMyChart"
                    width="720px"
                    height="525px"
+                   title="MyChart"
                    styles={{ clip:"rect(5px, 0px, 0px, 0px)", position: 'absolute', overflow: "hidden"}}
 
                 ></iframe>

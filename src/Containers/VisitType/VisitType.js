@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { useTransition, animated } from 'react-spring'
+// import { useTransition, animated } from 'react-spring'
 import NextButton from '../../Components/commonUI/NextButton';
 import { withRouter} from 'react-router';
 
