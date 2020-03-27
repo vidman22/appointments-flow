@@ -3,8 +3,19 @@ services:
     - docker
 
 before_install:
-    - docker build -t johnvidmar/docker-react -f Dockerfile.dev .
+    - docker build -t johnvidmar/perlmanscheduler -f Dockerfile.dev .
   
 script:
-    - docker run -e CI=true johnvidmar/docker-react npm run test
-      
+    - docker run -e CI=true johnvidmar/perlmanscheduler npm run test
+
+deploy:
+    provider: elasticbeanstalk
+    region: "us-west-1"
+    app: "perlman-scheduling"
+    env: "Docker-env"
+    bucket-name: "elasticbeanstalk-us-west-1-869407026545"
+    bucket-path: "perlman-scheduling"
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
