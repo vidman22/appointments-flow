@@ -15,9 +15,11 @@ const locations = () => {
   return locations;
 }
 
+let key = 'docker'
+
 const MyMapComponent = compose(
     withProps({
-      googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGDb8cTZ1DXx9l6UmKjcHuOEmNUU7pGA&",
+      googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${key}`,
       loadingElement: <div style={{ height: `500px`  }} />,
       containerElement: <div className="MapContainerElement"  />,
       mapElement: <div style={{ height: `100%`, width: '100%', cursor: 'default'}} />,
