@@ -47,9 +47,9 @@ class VisitType extends Component {
     updatedElement.valid = true;
     updatedElement.msg = '';
 
-    console.log("updated El", updatedElement);
-    console.log("name", name);
-    console.log("type", type);
+    // console.log("updated El", updatedElement);
+    // console.log("name", name);
+    // console.log("type", type);
     this.setState({
       [type] : updatedElement
     }); 
@@ -82,7 +82,6 @@ class VisitType extends Component {
 
   render(){
     const {firstTime, annualPhysical} = this.state;
-    console.log("ft and ap", firstTime, annualPhysical);
 
     return (
         <div className="CheckBoxWrapper">
