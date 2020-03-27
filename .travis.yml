@@ -1,0 +1,9 @@
+sudo: required
+services: 
+    - docker
+
+before_install:
+    - docker run -e CI=true johnvidmar/appointments-flow:latest -f Dockerfile.dev .
+
+script:
+    - docker run johnvidmar/appointments-flow npm run test -- --coverage
