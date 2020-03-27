@@ -1,5 +1,11 @@
+os:
+    - linux
+
 services: 
     - docker
+
+language:
+    - ruby
 
 before_install:
     - docker build -t jviddie/perlmanscheduler-test -f ./Dockerfile.dev .
@@ -18,8 +24,8 @@ deploy:
     provider: elasticbeanstalk
     region: "us-east-1"
     app: "perlmanscheduler"
-    env: "PerlmanScheduler-env"
-    bucket-name: "elasticbeanstalk-us-east-1-995337549165"
+    env: "Perlmanscheduler-env"
+    bucket: "elasticbeanstalk-us-east-1-995337549165"
     bucket_path: "perlmanscheduler"
     on:
         branch: master
