@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker run -e CI=true johnvidmar/appointments-flow:latest -f Dockerfile.dev .
+    - docker build -t johnvidmar/appointments-flow -f Dockerfile.dev .
 
 script:
-    - docker run johnvidmar/appointments-flow npm run test -- --coverage
+    - docker run CI=true johnvidmar/appointments-flow npm run test
