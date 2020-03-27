@@ -12,7 +12,7 @@ deploy:
     provider: elasticbeanstalk
     region: "us-west-1"
     app: "perlman-scheduling"
-    env: "Docker-env"
+    env: "PerlmanScheduling-env"
     bucket-name: "elasticbeanstalk-us-west-1-869407026545"
     bucket-path: "perlman-scheduling"
     on:
