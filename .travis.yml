@@ -18,10 +18,10 @@ after_success:
 deploy:
     provider: elasticbeanstalk
     region: "us-west-1"
-    app: "perlman-scheduling"
-    env: "PerlmanScheduling-env"
-    bucket-name: "elasticbeanstalk-us-west-1-869407026545"
-    bucket-path: "perlman-scheduling"
+    app: "perlmanscheduler"
+    env: "PerlmanScheduler-env"
+    bucket-name: "elasticbeanstalk-us-east-1-995337549165"
+    bucket-path: "perlmanscheduler"
     on:
         branch: master
     access_key_id: $AWS_ACCESS_KEY
