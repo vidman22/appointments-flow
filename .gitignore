@@ -7,8 +7,6 @@
 # production
 /build
 
-docker-compose.yml
-docker-compose-dev.yml
 # misc
 .DS_Store
 .env.local
